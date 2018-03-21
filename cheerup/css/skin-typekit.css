@@ -1,0 +1,373 @@
+/**
+ * Skin: Classic
+ */
+/**
+ * Skin Specifics for General
+ */
+.navigation.inline .menu > li > a {
+  letter-spacing: 0.08em;
+}
+
+.navigation.inline .menu > li li a,
+.navigation.inline .mega-menu .sub-cats a {
+  font-size: 13px;
+  letter-spacing: 0.07em;
+  font-weight: 600;
+}
+
+.navigation.simple .menu > li > a {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+/* Change text / contrast font */
+body,
+input,
+textarea,
+select,
+blockquote,
+.archive-head .description,
+.text,
+.post-content,
+.textwidget,
+.post-meta .text-in,
+.widget_categories a,
+.widget_product_categories a,
+.widget_archive a,
+.woocommerce .woocommerce-message,
+.woocommerce .woocommerce-error,
+.woocommerce .woocommerce-info,
+.woocommerce form .form-row,
+.woocommerce .woocommerce-noreviews,
+.woocommerce #reviews #comments ol.commentlist .description,
+.woocommerce-cart .cart-empty,
+.woocommerce-cart .cart-collaterals .cart_totals table {
+  font-family: ff-meta-serif-web-pro, Georgia, serif;
+  letter-spacing: 0;
+}
+
+/* Change main body and heading font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input[type="submit"],
+button,
+input[type="button"],
+.button,
+.modern-quote cite,
+.top-bar-content,
+.search-action .search-field,
+.main-head .title,
+.navigation,
+.tag-share,
+.post-share-b .service,
+.author-box,
+.comments-list .comment-content,
+.post-nav .label,
+.main-footer.dark .back-to-top,
+.lower-footer .social-icons,
+.main-footer .social-strip .social-link,
+.main-footer.bold .links .menu-item,
+.main-footer.bold .copyright,
+.archive-head,
+.cat-label a,
+.section-head,
+.post-title-alt,
+.post-title,
+.block-heading,
+.block-head-b,
+.small-post .post-title,
+.likes-count .number,
+.post-meta,
+.grid-post-b .read-more-btn,
+.list-post-b .read-more-btn,
+.post-footer .read-more,
+.post-footer .social-share,
+.post-footer .social-icons,
+.large-post-b .post-footer .author a,
+.products-block .more-link,
+.main-slider,
+.slider-overlay .heading,
+.large-slider,
+.large-slider .heading,
+.grid-slider .category,
+.grid-slider .heading,
+.carousel-slider .category,
+.carousel-slider .heading,
+.grid-b-slider .heading,
+.bold-slider,
+.bold-slider .heading,
+.main-pagination,
+.main-pagination .load-button,
+.page-links,
+.post-content .read-more,
+.widget-about .more,
+.widget-posts .post-title,
+.widget-posts .posts.full .counter:before,
+.widget-cta .label,
+.social-follow .service-link,
+.widget-twitter .meta .date,
+.widget-twitter .follow,
+.widget_categories,
+.widget_product_categories,
+.widget_archive,
+.mobile-menu,
+.woocommerce .main .button,
+.woocommerce .quantity .qty,
+.woocommerce nav.woocommerce-pagination,
+.woocommerce-cart .post-content,
+.woocommerce .woocommerce-ordering,
+.woocommerce-page .woocommerce-ordering,
+.woocommerce ul.products,
+.woocommerce.widget,
+.woocommerce div.product,
+.woocommerce #content div.product,
+.woocommerce-cart .cart-collaterals .cart_totals .button,
+.woocommerce .checkout .shop_table thead th,
+.woocommerce .checkout .shop_table .amount,
+.woocommerce-checkout #payment #place_order {
+  font-family: "brandon-grotesque", sans-serif;
+}
+
+/* Adjust text color */
+.mega-menu .recent-posts .post-title,
+.tag-share .post-tags a,
+.text,
+.post-content,
+.textwidget,
+.social-share a,
+.social-icons a,
+.post-footer .author a,
+.post-footer .read-more-link,
+.widget-cta .label,
+.tagcloud a,
+.widget_categories a,
+.widget_product_categories a,
+.widget_archive a {
+  color: #535353;
+}
+
+.text,
+.textwidget,
+.post-content {
+  color: #606060;
+}
+
+/**
+ * General components and global changes
+ */
+input,
+select {
+  font-size: 14px;
+  height: 2.64286em;
+}
+
+textarea {
+  font-size: 14px;
+}
+
+blockquote {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+}
+
+blockquote cite {
+  font-size: 13px;
+}
+
+.text,
+.textwidget,
+.post-content {
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0;
+}
+
+@media (max-width: 767px) {
+  .text,
+  .textwidget,
+  .post-content {
+    font-size: 14px;
+  }
+}
+
+.post-footer .author {
+  font-size: 13px;
+}
+
+.subscribe-box .text {
+  font-size: 14px;
+}
+
+.slider-overlay .excerpt {
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.posts-carousel .post-meta,
+.related-posts .post-meta {
+  font-size: 10px;
+}
+
+/**
+ * Posts adjustments
+ */
+.post-content {
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  .post-content {
+    font-size: 15px;
+  }
+}
+
+/**
+ * Sidebar adjustments
+ */
+.widget .mc4wp-form .message,
+.widget-subscribe .message {
+  font-size: 14px;
+}
+
+.widget_categories a,
+.widget_product_categories a,
+.widget_archive a {
+  font-size: 15px;
+}
+
+.widget_links li,
+.widget_meta li,
+.widget_recent_comments li,
+.widget_recent_entries li,
+.widget_rss li,
+.widget_pages li,
+.widget_nav_menu li {
+  font-size: 15px;
+}
+
+.widget-posts .excerpt > p {
+  font-size: 14px;
+}
+
+.widget_calendar tr td,
+.widget_calendar th td {
+  font-size: 13px;
+}
+
+.tagcloud a {
+  font-size: 13px !important;
+}
+
+/**
+ * Footer changes
+ */
+.upper-footer .widget-about .about-text {
+  font-size: 14px;
+}
+
+.lower-footer {
+  font-size: 13px;
+}
+
+/**
+ * WooCommerce adjustments
+ */
+.woocommerce .woocommerce-message,
+.woocommerce .woocommerce-error,
+.woocommerce .woocommerce-info {
+  font-size: 15px;
+}
+
+.woocommerce form .form-row {
+  font-size: 14px;
+}
+
+.woocommerce #reviews ol.commentlist .description {
+  font-size: 15px;
+}
+
+.woocommerce #payment ul.payment_methods,
+.woocommerce #payment div.payment_box {
+  font-size: 14px;
+}
+
+.woocommerce-cart .cart-collaterals .cart_totals tr th,
+.woocommerce-cart .cart-collaterals .cart_totals tr td {
+  font-size: 14px;
+}
+
+.woocommerce-cart .cart-empty {
+  font-size: 15px;
+}
+
+.is-win .navigation a,
+.is-win .sidebar .widget-title,
+.is-win .widget-cta .label,
+.is-win .section-head .title,
+.is-win .post-footer .read-more-link,
+.is-win .widget-posts .post-title,
+.is-win .widget .product-title,
+.is-win .products-block .more-link,
+.is-win .main-pagination,
+.is-win .tag-share .post-tags a,
+.is-win .author-box .author > span {
+  -webkit-text-stroke: 0.2px;
+}
+
+.is-win .navigation a:after {
+  -webkit-text-stroke: 0;
+}
+
+.is-win input,
+.is-win textarea,
+.is-win select,
+.is-win .text,
+.is-win .post-content,
+.is-win .textwidget,
+.is-win .mid-footer .overlay,
+.is-win .lower-footer,
+.is-win .post-footer .author,
+.is-win .slider-overlay .excerpt,
+.is-win .mc4wp-alert,
+.is-win .widget_archive li,
+.is-win .widget_meta li,
+.is-win .widget_recent_comments li,
+.is-win .widget_recent_entries li,
+.is-win .widget_pages li,
+.is-win .widget_nav_menu li,
+.is-win .widget_categories a,
+.is-win .widget_product_categories a,
+.is-win .widget_archive a,
+.is-win .woocommerce .woocommerce-message,
+.is-win .woocommerce .woocommerce-error,
+.is-win .woocommerce .woocommerce-info,
+.is-win .woocommerce form .form-row,
+.is-win .woocommerce #reviews #comments ol.commentlist .description,
+.is-win .woocommerce-cart .cart-collaterals .cart_totals table {
+  -webkit-text-stroke: 0.2px;
+}
+
+.is-win .widget .mc4wp-form .message,
+.is-win .widget-subscribe .message {
+  -webkit-text-stroke: 0.1px;
+}
+
+.is-win blockquote,
+.is-win .wp-caption-text,
+.is-win .slider-overlay .excerpt {
+  -webkit-text-stroke: 0;
+}
+
+.wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading h5, .wf-loading h6,
+.wf-loading p,
+.wf-loading a,
+.wf-loading label,
+.wf-loading .search-field {
+  visibility: hidden;
+  -webkit-transition: none !important;
+  transition: none !important;
+}

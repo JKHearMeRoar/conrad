@@ -1,0 +1,809 @@
+/**
+ * Skin: Fitness
+ */
+
+// Note: This skin uses selector override method on top of base CSS styling from style.scss
+
+// Import essentials
+@import 'abstracts/_variables';
+@import 'abstracts/_utils';
+
+// Variables for this skin
+$skin-font: Karla, Arial, sans-serif;
+$skin-font-alt: Renner, Arial, sans-serif;
+$skin-color: #a24034;
+$special-title-font: $skin-font-alt;
+
+//
+// Fonts
+//
+@font-face {
+	font-family: 'Renner';
+	src: url('fonts/renner/renner-book-webfont.woff2') format('woff2'),
+         url('fonts/renner/renner-book-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Renner';
+	src: url('fonts/renner/renner-medium-webfont.woff2') format('woff2'),
+         url('fonts/renner/renner-medium-webfont.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Renner';
+	src: url('fonts/renner/renner-bold-webfont.woff2') format('woff2'),
+         url('fonts/renner/renner-bold-webfont.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Renner';
+	src: url('fonts/renner/renner-black-webfont.woff2') format('woff2'),
+         url('fonts/renner/renner-black-webfont.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+}
+
+
+// Mixin
+@mixin special-title {
+	font-family: $special-title-font;
+	font-weight: 600;
+	color: #000;
+}
+
+@mixin bold-title {
+	font-weight: 600;
+}
+
+// Base overrides
+@import 'skins/fitness-base';
+
+
+/**
+ * Header and Nav
+ */
+
+.main-head.nav-below {
+	
+	.top-bar-content {
+		color: #aaa;
+	}
+
+	.social-icons a {
+		color: inherit;
+	}
+
+	.cart-action a,
+	.search-submit {
+		color: inherit;
+	}
+
+	.search-field {
+		color: #999;
+		font-weight: 400;
+	}
+}
+
+.search-action {
+	.search-field {
+		font-size: 12px;
+	}
+}
+
+.navigation {
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.09em;
+	color: #111;
+
+	.menu > li:first-child {
+		//margin-left: -19px;
+	}
+	
+	.menu > li > a {
+		//padding: 0 19px;
+	}
+	
+	.menu > li li a,
+	.mega-menu .sub-cats a {
+		letter-spacing: 0.09em;
+		font-size: 12px;
+		font-weight: 500;
+		color: #3a3a3a;
+	}
+	
+	.mega-menu .recent-posts .post-title {
+		margin-bottom: 8px;
+		font-size: 16px;
+		font-weight: 500;
+		letter-spacing: 0;
+	}
+}
+
+.navigation.below {
+	line-height: 50px;
+	height: 50px;
+	border-top-color: transparent;
+	border-bottom-color: #e6e6e6;
+    box-shadow: 0 3px 5px -3px rgba(#000, 0.09);
+}
+
+.navigation.dark {
+	background: #000;
+	font-weight: 400;
+	
+	.menu > li > a,
+	.menu > .current-menu-item > a, 
+	.menu > .current-menu-parent > a,
+	.menu > .current-menu-ancestor > a {
+		color: #fff;
+	}
+	
+	.menu li:hover > a,
+	.menu li li:hover > a,
+	.menu li:hover > a:after {
+		color: $skin-color;
+	}
+	
+	.menu > li li a {
+		//border-color: rgba(187, 187, 187, 0.15);
+	}
+
+	.menu > li li a,
+	.mega-menu .sub-cats a {
+		color: #eee;
+		font-weight: 400;
+	}
+
+	.mega-menu .recent-posts .post-title {
+		color: #eee;
+		//font-weight: 400;
+	}
+}
+
+.mobile-menu li a {
+	letter-spacing: 0.1em;
+}
+
+.head-nav-below + .carousel-slider {
+	margin-top: 48px;
+}
+
+
+/**
+ * General components and global changes
+ */
+
+%read-more-btn {
+	padding: 13px 19px;
+	border-color: transparent;
+	color: #fff;
+	background: #000;
+	font-size: 11px;
+	font-weight: 500;
+	letter-spacing: 0.11em;
+	line-height: 1;
+	will-change: opacity;
+
+	&:hover {
+		opacity: 0.87;
+	}
+}
+
+::selection { 
+	background: rgba($skin-color, 0.2);
+}
+
+::-moz-selection {
+	background: rgba($skin-color, 0.2);
+}
+
+input[type="submit"], 
+button, input[type="button"], 
+.button {
+	letter-spacing: 0.075em;
+	font-size: 12px;
+}
+
+input,
+textarea,
+select {
+	color: #9c9c9c;
+}
+
+blockquote {
+	font-family: Lora, Georgia, serif;
+	font-size: 19px;
+	color: #989898;
+}
+
+.section-head {
+	.title {
+		@include bold-title;
+		font-size: 13px;
+		letter-spacing: 0.075em;
+		color: #161616;
+	}
+}
+ 
+.post-meta {
+	font-size: 11px;
+	color: #aaa;
+
+	.text-in {
+		display: none;
+	}
+
+	.post-cat > a {
+		letter-spacing: 0.075em;
+		-webkit-font-smoothing: antialiased;
+	}
+	
+	time {
+		font-weight: 400;
+	}
+
+	time,
+	.comments {
+		letter-spacing: 0.075em;
+	}
+}
+
+.post-meta-a {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+
+	// Last as siblings default to order: 0
+	.post-cat {
+		order: 1;
+	}
+	
+	.meta-sep {
+		padding: 0 6px;
+	}
+	
+	// Always first
+	.date-link {
+		order: -1;
+	}
+
+	.post-title,
+	.post-title-alt {
+		order: 2;
+		width: 100%;
+	}
+}
+
+.grid-post,
+.large-post {
+	.post-meta-a {
+		justify-content: center;
+	}
+}
+
+.post-title,
+.post-title-alt {
+	@include special-title;
+	line-height: 1.35;
+	-webkit-font-smoothing: antialiased;
+
+	.post-cat > a {
+		font-size: 12px;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	a {
+		color: #000;
+	}
+}
+
+.post-title-alt {
+	margin-top: 16px;
+	margin-bottom: 16px;
+	font-size: 29px;
+	
+	@include breakpoint(x-small) {
+		font-size: 24px;
+	}
+	
+	&:after {
+		display: none;
+	}
+}
+
+.text,
+.textwidget,
+.post-content {
+	-webkit-font-smoothing: antialiased;
+	letter-spacing: -0.008em;
+}
+
+.text,
+.textwidget {
+	font-size: 15px;
+	line-height: 1.7;
+}
+
+// Slider overlay category etc.
+.cat-label a {
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+	-webkit-font-smoothing: initial;
+}
+
+
+// Pagination changes
+.main-pagination {
+	.next a,
+	.previous a {
+		letter-spacing: 0.15em;
+	}
+
+	.load-button {
+		min-width: initial;
+		padding: 2px 60px;
+		background: #fff;
+		font-weight: 700;
+		letter-spacing: 0.075em;
+		-webkit-font-smoothing: initial;
+	}
+
+	&.load-more {
+		margin-top: 80px;
+	}
+}
+
+/**
+ * Posts adjustments
+ */
+
+.large-post-b {
+	.read-more a {
+		@extend %read-more-btn;
+		
+		&:hover {
+			opacity: 0.8;
+		}
+			
+		&:before {
+			display: none;
+		}
+		
+		span {
+			padding: 0;
+			background: transparent;
+		}
+	}
+}
+
+.large-post-b .post-footer {
+	letter-spacing: 0;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #ebebeb;
+	
+	.author a {
+		letter-spacing: 0.15em;
+	}
+	
+	.number {
+		font-size: 13px;
+		font-weight: 400;
+	}
+	
+	.social-icons a {
+		font-size: 14px;
+	}
+}
+
+.post-footer {
+	margin-top: 45px;
+	
+	.read-more {
+		font-size: 11px;
+		font-weight: 900;
+		letter-spacing: 0.1em;
+	}
+}
+
+.list-post {
+
+	.post-excerpt {
+		font-size: 15px;
+		line-height: 1.75;
+	}
+
+	.post-title {
+		// 1200px+
+		@include breakpoint(false, large) {
+			max-width: 100%;
+			font-size: 25px;
+		}
+	}
+}
+
+// List post b
+.list-post-b {
+
+	.read-more-btn {
+		@extend %read-more-btn;
+	}
+
+	.post-meta time {
+		letter-spacing: 0.075em;
+	}
+}
+
+.grid-post { 
+	.post-thumb {
+		margin-bottom: 31px;
+	}
+
+	.post-meta-a .post-title-alt {
+		margin-bottom: 22px;
+
+		&:after {
+			margin-top: 17px;
+			display: block;
+			border-color: #161616;
+			border-width: 2px;
+		}
+
+		// 1200px+
+		@include breakpoint(false, large) {
+			font-size: 25px;
+		}
+	}
+
+	.post-meta-b {
+		margin-top: 28px;
+		margin-bottom: 20px;
+	}
+
+	.post-footer {
+		margin-top: 34px;
+	}
+}
+
+
+// Grid Post B
+.grid-post-b .read-more-btn {
+	@extend %read-more-btn;
+}
+
+
+/* Single Post */
+
+.the-post {
+	.the-post-header .post-title {
+		margin-top: 15px;
+		margin-bottom: 15px;
+
+		@include breakpoint(false, medium) {
+			font-size: 30px;
+		}
+	}
+}
+
+.single-cover .overlay .post-by {
+	font-weight: 600;
+	letter-spacing: 0.12em;
+}
+
+.post-content {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.75;
+	
+	h1, h2, h3, h4, h5, h6 {
+		@include bold-title;
+	}
+}
+
+.post-excerpt {
+	font-size: 15px;
+	line-height: 1.75;
+}
+
+.tag-share {
+	.post-tags a {
+		letter-spacing: 0.1em;
+		font-weight: 700;
+	}
+}
+
+.post-share-icons a {
+	color: #161616;
+}
+
+
+.author-box {
+	.author > a {
+		font-size: 22px;
+	}
+}
+
+.related-posts {
+	.post-title {
+		font-size: 16px;
+		font-weight: 500;
+		letter-spacing: 0;
+	}
+	
+	.post-meta {
+		font-size: 10px;
+	}
+}
+
+
+/**
+ * Home & Archives changes
+ */
+
+.block-heading,
+.block-head-b .title {
+	font-family: $skin-font-alt;
+	font-weight: 600;
+	font-size: 17px;
+	letter-spacing: 0.06em;
+}
+
+.subscribe-box {
+	.text {
+		font-size: 14px;
+	}
+}
+
+.posts-carousel {
+
+	.title {
+		background: transparent;
+	}
+	
+	.title:before,
+	.title:after {
+		display: none;
+	}
+	
+	.block-heading {
+		margin-top: -5px;
+		margin-bottom: 62px;
+	}
+	
+	.block-heading:before {
+		display: none;
+	}
+	
+	.block-heading:after {
+		top: 100%;
+		left: 50%;
+		margin-top: 12px;
+		margin-left: -18px;
+		width: 36px;
+		height: 2px;
+		background: #000;
+	}
+
+	.post-link {
+		margin-bottom: 18px;
+	}
+	
+	.date-link {
+		display: none;
+	}
+
+	.post-title {
+		margin-top: 12px;
+		margin-bottom: 0;
+		font-size: 20px;
+		font-weight: 500;
+
+		@include breakpoint(false, x-small) {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 88%;
+		}
+	}
+
+	.post-meta {
+		font-size: 11px;
+	}
+	
+}
+
+// Default / Stylish slider
+.slider-overlay {
+	.heading {
+		font-family: $special-title-font;
+		font-weight: 400;
+		letter-spacing: 0;
+	}
+	
+	.excerpt {
+		font-size: 14px;
+		letter-spacing: 0;
+	}
+}
+
+// Fashion slider
+.common-slider {
+	.post-title,
+	.heading {
+		@include special-title;
+		line-height: 1.2;
+	}
+}
+
+.grid-b-slider {
+	.item-small .heading {
+		font-size: 23px;
+		line-height: 1.2;
+		font-weight: 500;
+	}
+
+	.category {
+		background: #000;
+	}
+
+	time {
+		color: inherit;
+	}
+}
+
+.carousel-slider {
+
+	.heading {
+		margin-top: 10px;
+		margin-bottom: 2px;
+		font-weight: 500;
+	}
+
+	.category {
+		padding: 8px 11px;
+		font-size: 11px;
+		font-weight: 600;
+		letter-spacing: 0.12em;
+	}
+}
+
+.fashion-slider {
+	.post-title {
+		// From 1200px+
+		@include breakpoint(false, large) {
+			font-size: 36px;
+		}
+	}
+}
+
+
+/**
+ * Sidebar adjustments
+ */
+
+.sidebar {
+	.widget-title {
+		border-top-color: $skin-color;
+		font-size: 12px;
+		letter-spacing: 0.075em;
+		color: #000;
+	}
+	
+	
+	.widget_mc4wp_form_widget,
+	.widget-subscribe {
+		background: #f7f7f7;
+		
+		.widget-title {
+
+			text-transform: uppercase;
+			
+			&:after {
+				margin-top: 18px;
+				width: 18px;
+				border-bottom: 0;
+			}
+		}
+	}
+}
+
+
+.widget-posts {
+	.post-title {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1.55;
+		letter-spacing: 0;
+	}
+	
+	.posts.large {
+		.post-title {
+			font-size: 17px;
+			font-weight: 500;
+		}
+	}
+}
+
+.widget .mc4wp-form, 
+.widget-subscribe {
+	.message {
+		color: #161616;
+		font-size: 14px;
+		letter-spacing: 0;
+	}
+}
+
+.widget-about {
+	.more {
+		color: #161616;
+		font-weight: 700;
+	}
+}
+
+.widget-cta {
+	.label {
+		font-size: 12px;
+		letter-spacing: 0.07em;
+	}
+}
+
+// Default widgets
+// Default widgets font
+.widget_links, 
+.widget_meta, 
+.widget_categories, 
+.widget_product_categories,
+.widget_archive,
+.widget_recent_entries, 
+.widget_pages, 
+.widget_nav_menu  {
+	a {
+		font-size: 15px;
+	}
+}
+
+/* Footer Changes */
+.upper-footer {
+	
+	.widget-title {
+		color: #000;
+		font-size: 14px;
+		letter-spacing: 0.06em;
+	}
+	
+	.widget-posts .post-meta {
+		color: #707070;
+	}
+
+	.widget-about .about-text {
+		font-size: 15px;
+	}
+}
+
+.lower-footer {
+	.copyright {
+		font-size: 14px;
+	}
+	
+	.social-icons {
+		letter-spacing: 0.12em;
+
+		.fa {
+			margin-right: 2px;
+		}
+	}
+}
+
+.main-footer.alt {
+	.social-icons .label {
+		color: #161616;
+		font-size: 12px;
+		letter-spacing: 0.075em;
+	}
+}

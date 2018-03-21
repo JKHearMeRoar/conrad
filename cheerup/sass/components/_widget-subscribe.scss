@@ -1,0 +1,89 @@
+/**
+ * Widget: Mailchimp Subscribe - for integrated and external plugin widget
+ */
+
+.sidebar {
+	.widget_mc4wp_form_widget,
+	.widget-subscribe {
+		padding: 28px 30px;
+		background: #f5f9f9;
+		
+		.widget-title {
+			position: relative;
+			border: 0;
+			margin-bottom: 38px;
+			line-height: 1;
+		}
+		
+		.widget-title:after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: calc(50% - 9px);
+			margin-top: 18px;
+			width: 18px;
+			height: 1px;
+			background: #b4b4b4;
+		}
+		
+		.message {
+			text-align: center;
+		}
+	}
+}
+
+// Dark variation
+.dark {
+	.widget_mc4wp_form_widget,
+	.widget-subscribe {
+		background: transparent;	
+
+		.message {
+			color: inherit;
+		}
+	}
+}
+
+.widget .mc4wp-form,
+.widget-subscribe {
+	
+	.message {
+		margin-bottom: 18px;
+		color: #353535;
+		font-size: 13px;
+		letter-spacing: -0.025em;
+	}
+	
+	input {
+		box-sizing: border-box;
+		width: 100%;
+		height: 41px;
+	}
+	
+	p:last-of-type {
+		margin-top: -16px;
+		margin-bottom: 0;
+	}
+}
+
+.widget .mc4wp-response {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.mc4wp-alert {
+	padding: 10px 10px;
+	background: #fcf8e3;
+	color: #8a6d3b;
+	font-size: 12px;
+}
+
+.mc4wp-error {
+	background: #f2dede;
+	color: #b94a48;
+}
+
+.mc4wp-success {
+	background: #dff0d8;
+	color: #3c763d;
+}

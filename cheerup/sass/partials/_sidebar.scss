@@ -1,0 +1,39 @@
+/**
+ * Sidebar
+ */
+ 
+.main .sidebar {
+	padding-left: 45px;
+	
+	@include breakpoint(medium) {
+		float: none;
+		margin: 0 auto;
+		margin-top: 65px;
+		padding-left: 15px;
+		//max-width: 550px;
+	}
+}
+ 
+.sidebar {
+	.widget {
+		margin-bottom: 45px;
+		
+		@include breakpoint(medium) {
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+	}
+	
+	.widget-title {
+		margin-bottom: 35px;
+		border: 1px solid #ebebeb;
+		box-sizing: border-box;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 41px;
+		letter-spacing: 0.055em;
+		text-align: center;
+		text-transform: uppercase;	
+	}
+}

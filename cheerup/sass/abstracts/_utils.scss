@@ -1,0 +1,81 @@
+//
+// Utility functions and mixins
+//
+
+@function my-rem($size, $root-font-size: $root-font-size) {
+	@return ($size / $root-font-size) * 1rem;
+}
+
+
+// Mixins
+@mixin clearfix() {
+	&:after, 
+	&:before {
+		content: "";
+		display: table;
+	}
+	
+	&:after {
+		clear: both;
+	}
+}
+ 
+// Based on sass-mq
+// Usage:
+//
+// Target small to medium:
+//    breakpoint(medium, small);
+// 
+// Target from 0 to large:
+//    breakpoint(large)
+//
+// Target manual numbers:
+//   breakpoint(767px, 480px);
+//
+  
+@mixin breakpoint($until: false, $from: false, $and: false, $breakpoints: $mq-breakpoints) {
+
+	$min-width: 0;
+	$max-width: 0;
+	$media-query: '';
+	
+	// From: this breakpoint
+	@if $from {
+		@if type-of($from) == number {
+			$min-width: $from;
+		} @else {
+			$min-width: mq-get-breakpoint-width($from, $breakpoints);
+		}
+	}
+
+	// Until: that breakpoint
+	@if $until {
+		@if type-of($until) == number {
+			$max-width: $until;
+		} @else {
+			$max-width: mq-get-breakpoint-width($until, $breakpoints);
+		}
+	}
+
+	@if $min-width != 0 { $media-query: '#{$media-query} and (min-width: #{$min-width})'; }
+	@if $max-width != 0 { $media-query: '#{$media-query} and (max-width: #{$max-width})'; }
+	@if $and            { $media-query: '#{$media-query} and #{$and}'; }
+	
+	// Remove first and
+	@if ($media-query != '') {
+		$media-query: str-slice(unquote($media-query), 6);
+	}
+
+	@media #{$media-query} {
+		@content;
+	}
+}
+
+// Helper map function for breakpoint
+@function mq-get-breakpoint-width($name, $breakpoints: $mq-breakpoints) {
+	@if map-has-key($breakpoints, $name) {
+		@return map-get($breakpoints, $name);
+	} @else {
+		@warn "Breakpoint #{$name} wasn't found in $breakpoints.";
+	}
+}

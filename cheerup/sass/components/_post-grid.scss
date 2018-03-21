@@ -1,0 +1,97 @@
+/**
+ * Grid Post
+ */
+
+.grid-post {
+	margin-bottom: 50px;
+	
+	.post-header {
+		text-align: center;
+	}
+	
+	.post-thumb {
+		margin-bottom: 25px;
+		overflow: hidden;
+		transform: translate3d(0, 0 ,0);
+	}
+	
+	.image-link {
+		display: block;
+		position: relative;
+	}
+	
+	.image-link img {
+		display: block;
+
+		@include breakpoint(small) {
+			width: 100%;
+			max-width: initial;
+		}
+	}
+	
+	// Post meta style 2 requires extra spacing
+	.post-meta-b {
+		margin-top: 30px;
+	}
+	
+	&.has-post-thumbnail .post-meta-c {
+		margin-top: -8px;
+	}
+	
+	// No excerpt?
+	&.no-excerpt {
+		.post-meta-c {
+			margin-bottom: 0;
+		}
+	} 
+	
+	
+	.post-title-alt {
+		font-size: 23px;
+	}
+	
+	.post-title:after {
+		margin-top: 10px;	
+	}
+	
+	.post-footer {
+		margin-top: 38px;
+		text-align: center;
+		line-height: 41px;
+		border-top: 1px solid #ebebeb;
+		border-bottom: 1px solid #ebebeb;
+	}
+	
+	.social-share {
+		font-size: 10px;
+		width: 100%;
+	}
+}
+
+
+/* Grid Post Stlye 2 */
+
+.grid-post-b {
+	text-align: center;
+	
+	.read-more-btn {
+		display: inline-block;
+		margin-top: 32px;
+		padding: 11px 12px;
+		border: 1px solid #e5e5e5;
+		background: #fbfbfb;
+		color: #777;
+		font-family: $title-font;
+		font-size: 10px;
+		letter-spacing: 0.12em;
+		line-height: 1;
+		text-transform: uppercase;
+		
+		&:hover {
+			background: #161616;
+			border-color: #161616;
+			color: #fff;
+		}
+	}
+	
+}

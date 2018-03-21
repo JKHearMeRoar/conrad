@@ -1,0 +1,190 @@
+/**
+ * Main Pagination
+ */
+ 
+.main-pagination {
+	margin-top: 100px;
+	font-family: $title-font;
+
+	.next a,
+	.previous a {
+		float: left;
+		padding-bottom: 3px;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		font-size: 11px;
+		font-weight: 600;
+		border-bottom: 1px solid #ebebeb;
+	}
+
+	.next a:hover,
+	.previous a:hover {
+		color: $main-color;
+	}
+
+	.next a {
+		float: right;
+	}
+
+	.fa {
+		font-size: 12px;
+		margin-left: 10px;
+	}
+
+	.previous .fa {
+		margin: 0;
+		margin-right: 10px;
+	}
+	
+	// Undo empty main pagination
+	.previous:empty + .next:empty {
+		margin-top: -75px;
+	}
+	
+	// Load More Button
+	.load-button {
+		display: inline-block;
+		min-width: 275px;
+		border: 1px solid #e7e7e7;
+		background: #f6f6f6;
+		color: #000;
+		
+		font-family: $title-font;
+		font-size: 12px;
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		line-height: 35px;
+		-webkit-font-smoothing: antialiased;
+		
+		.fa {
+			margin-left: 4px;
+			font-size: 11px;
+		}
+		
+		&:hover,
+		&.loading {
+			color: #fff;
+			background: #000;
+			border-color: #000;
+		}
+	}
+}
+
+/* Fancy Numbered Pagination */
+
+.main-pagination.number {
+	font-size: 12px;
+	color: #161616;
+	font-weight: 600;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	text-align:center;
+	
+	.inner {
+		display: inline-block;
+		padding: 5px 26px;
+		border: 1px solid #ebebeb;
+	}
+	
+	.page-numbers {
+		padding: 0 5px;
+		margin-right: 10px;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+		
+		// Can be a link itself or have a link inside
+		&:hover,
+		a:hover {
+			color: #777;
+		}
+	}
+	
+	.page-numbers, 
+	a {
+		display: inline-block;
+		line-height: 30px;
+	}
+	
+	.current {
+		color: $main-color;
+	}
+	
+	.dots {
+		color: #b4b4b4;
+		font-size: 0.86em;
+	}
+	
+	.fa {
+		font-size: 13px;
+	}
+	
+	.label-prev {
+		padding: 0;
+		margin-right: 18px;
+		
+		.fa {
+			color: #acacac;
+			margin: 0;
+			margin-right: 8px;
+		}
+	}
+	
+	.label-next {
+		padding: 0;
+		margin-left: 8px; 
+		
+		.fa {
+			color: #acacac;
+			margin: 0;
+			margin-left: 8px;
+		}
+	}
+	
+	.page-numbers .disabled {
+		color: #b4b4b4;
+		text-decoration: line-through;
+		
+		.fa {
+			display: none;
+		}
+	}
+} 
+
+/* Page Links */
+.page-links {
+	overflow: hidden;
+	font-family: $title-font;
+
+	.page-numbers, 
+	a,
+	> span {
+		display: block;
+		float: left;
+		padding: 8px 10px;
+		margin-right: 5px;
+		border: 1px solid #ebebeb;
+		color: #a0a0a0;
+		background: transparent;
+		line-height: 1;
+		font-size: 12px;
+		font-weight: 600;
+	}
+
+	.current, 
+	a:hover,
+	> span { 
+		color: #fff;
+		background: $main-color;
+		border-color: $main-color;
+		text-decoration: none;
+	}
+}
+
+
+/* Load More Pagination */
+.main-pagination.load-more {
+	text-align: center;
+}

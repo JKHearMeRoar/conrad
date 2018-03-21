@@ -1,0 +1,358 @@
+/**
+ * Meta boxes and other styling for admin
+ */
+ 
+.cf:before, .cf:after { content: " "; display: table; }
+.cf:after { clear: both; }
+.cf { *zoom: 1; } /* ie7 only */
+
+
+.bunyad-meta { 
+	margin: 5px 0 15px 0; 
+}
+
+.bunyad-meta .option { 
+	overflow: hidden;
+	padding: 15px 5px;
+	border-bottom: 1px solid #eee;
+}
+
+.bunyad-meta .option:hover {
+	background: #f9f9f9; 
+}
+
+.bunyad-meta .option:last-child { 
+	border-bottom: 0; 
+}
+
+.bunyad-meta .label {
+	width: 20%;
+	float: left;
+	display: block;
+	max-width: 200px;
+	font-weight: 600;
+}
+
+.bunyad-meta .field {
+	float: left;
+	width: 80%;
+	padding-left: 10px;
+	display: block;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.bunyad-meta .description {
+	margin-top: 7px;
+	font-size: 90%;
+}
+
+.bunyad-meta .field textarea {
+	max-width: 100%;
+	margin: 3px 0;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.radio-option label span { 
+	margin-left: 5px; 
+}
+
+/* form elements */
+.color-picker-element { 
+	display: none; 
+	position: absolute; 
+	background-color: #fcfcfc; 
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 1px 4px 0 rgba(0,0,0, 0.2);
+	box-shadow: 0px 1px 4px 0 rgba(0,0,0, 0.2);
+	z-index: 1;
+}
+
+.mce_bunyad_shortcodesList {
+	font-size: 14px;	
+}
+
+.image-upload {
+	display: none;
+	max-width: 350px;
+	margin-top: 10px;
+}
+
+.image-upload.visible {
+	display: block;
+}
+
+.image-upload img {
+	max-width: 100%;
+}
+
+.remove-image, 
+.image-type {
+	display: none !important;
+}
+
+.remove-image.visible, 
+.image-type.visible {
+	display: inline-block !important;
+}
+
+/* Default Form Table Extras */
+
+.form-table .form-field .input-number {
+	width: 15%;
+	min-width: 50px;
+	max-width: 100px;
+}
+
+/* Core bug for themes page */
+.themes-php .notice {
+	display: block;	
+}
+
+/**
+ * Widgets
+ */
+ 
+.bunyad-note {
+	font-size: 12px;
+	margin-top: 20px;
+}
+
+.bunyad-cta-group {
+	border: 1px solid #e5e5e5;
+	padding-bottom: 10px;
+	margin-top: 20px;
+	background: #fafafa;
+	padding: 10px 15px;
+	cursor: move;
+}
+
+.bunyad-cta-group p:first-child {
+	margin-top: 0;
+}
+
+/**
+ * Customizer Controls
+ */
+.customize-control-typography .sub-label {
+	width: 20%;
+	display: inline-block;
+}
+
+.customize-control-typography + .customize-control-typography {
+	margin-top: 5px;
+	border-top: 1px solid #d9d9d9;
+	padding-top: 15px;
+}
+
+.button.reset-customizer {
+	margin-top: 10px;	
+}
+
+#customize-control-home_carousel {
+	margin-top: 10px;
+	border-top: 1px solid #d9d9d9;
+	padding-top: 15px;	
+}
+
+
+/* Customizer 4.5 preview for tablets matching iPad */
+.wp-customizer .preview-tablet .wp-full-overlay-main {
+	margin-left: -384px;
+	width: 768px;
+	height: 1024px;
+}
+
+/* Matching iPhone 6 */
+.wp-customizer .preview-mobile .wp-full-overlay-main {
+	margin-left: -207px;
+	width: 414px;
+	height: 736px;
+}
+
+/* Show Desc */
+#sub-accordion-panel-sphere-social-followers .customize-info .description {
+	display: block;
+}
+
+
+/**
+ * Dashboard
+ */
+.ts-dash .nav-tab-wrapper {
+	margin-top: 0;
+}
+
+.ts-dash .about-text {
+	margin-right: 0;	
+}
+
+.ts-dash h1 {
+	margin-top: 34px;
+	font-size: 33px;
+	margin-bottom: 25px;
+	
+}
+
+.ts-dash .about-text p {
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.ts-dash-box {
+	position: relative;
+	margin: 16px 0;
+	margin-bottom: 35px;
+	padding: 25px;
+	border: 1px solid #e5e5e5;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+	background: #fff;
+	font-size: 13px;
+	line-height: 2.1em;
+	overflow: hidden;
+}
+
+.ts-dash-box .button-hero {
+	margin-top: 8px;
+}
+
+.ts-dash-box .content {
+	position: relative;
+}
+
+.ts-dash-box .bg {
+	position: absolute;
+	z-index: 0;
+	right: 220px;
+	top: -15px;
+	font-size: 270px;
+	color: #006799;
+	opacity: 0.05;
+}
+
+.ts-dash-box h3 {
+	margin-top: 0;
+}
+
+.ts-dash-box ol {
+	font-size: 14px;
+}
+
+.ts-dash-box li {
+	margin-bottom: 3px;
+}
+
+.ts-dash-box p {
+	max-width: initial;
+	line-height: 1.6;
+}
+
+.ts-support-info hr {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.ts-support-info .dashicons {
+	vertical-align: middle;
+	margin-bottom: 6px;
+	margin-right: 12px;
+	margin-left: -4px;
+	color: #0084b9;
+	font-size: 24px;
+}
+
+.ts-support-info .button {
+	margin-top: 10px;
+}
+
+/**
+ * Visual Composer Icons
+ */ 
+ 
+.sphere-icon .vc_element-icon {
+	background-size: 100%;
+	width: 60px !important;
+	height: 47px !important;
+	margin-top: -7px;		
+}
+
+
+.sphere-icon_nav .vc_element-icon {
+	background-size: 100%;
+	width: 66px !important;
+	height: 51px !important;
+	top: 9px !important;
+}
+
+.sphere-icon_nav {
+	padding-left: 82px !important;
+}
+
+.tsb-news-grid {
+	background-image: url('images/news-grid-block.png') !important;
+}
+
+.tsb-highlights {
+	background-image: url('images/highlights-block.png') !important;
+}
+
+.tsb-post-listings {
+	background-image: url('images/post-listings-block.png') !important;
+}
+
+.tsb-loop-default {
+	background-image: url('images/classic-large-block.png') !important;
+}
+.tsb-loop-1st-large {
+	background-image: url('images/large-grid-block.png') !important;
+}
+
+.tsb-loop-1st-large-list {
+	background-image: url('images/large-list-block.png') !important;
+}
+
+.tsb-loop-1st-overlay {
+	background-image: url('images/overlay-grid-block.png') !important;
+}
+
+.tsb-loop-1st-overlay {
+	background-image: url('images/overlay-grid-block.png') !important;
+}
+
+.tsb-loop-1st-overlay-list {
+	background-image: url('images/overlay-list-block.png') !important;
+}
+
+.tsb-loop-1-2 {
+	background-image: url('images/mixed-large-grid-block.png') !important;
+}
+
+.tsb-loop-1-2-list {
+	background-image: url('images/mixed-large-list-block.png') !important;
+}
+
+.tsb-loop-1-2-overlay {
+	background-image: url('images/mixed-overlay-grid-block.png') !important;
+}
+
+.tsb-loop-1-2-overlay-list {
+	background-image: url('images/mixed-overlay-list-block.png') !important;
+}
+
+.tsb-loop-list {
+	background-image: url('images/list-block.png') !important;
+}
+
+.tsb-loop-grid {
+	background-image: url('images/grid-block.png') !important;
+}
+
+.tsb-loop-grid-3 {
+	background-image: url('images/grid-3-block.png') !important;
+}

@@ -1,0 +1,180 @@
+/**
+ * Default galleries
+ */
+
+.gallery {
+	margin: -5px;
+}
+
+.gallery-item {
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	padding: 5px;	
+	position: relative;
+	box-sizing: border-box;
+}
+
+.gallery-item a img {
+	width: 100%;
+	display: block;
+	margin: 0 auto;	
+}
+
+.gallery-columns-1 {
+	
+	.wp-caption-text {
+		margin-top: 12px;
+		margin-bottom: 28px;
+	}
+	
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+
+// Fixed width for small viewport for 4-9 columns - no less
+// 3 columns on limited screen
+@for $i from 4 through 9 {
+	.gallery-columns-#{$i} .gallery-item {
+	
+		@include breakpoint(small) {
+			max-width: 33.333%;
+		}
+	}
+}
+
+
+// Hide caption for really small galleries
+.gallery-columns-7 .wp-caption-text,
+.gallery-columns-8 .wp-caption-text,
+.gallery-columns-9 .wp-caption-text {
+	display: none;
+}
+
+// Hide caption for 5 and 6 column galleries too when there's a right sidebar
+.right-sidebar {
+	.gallery-columns-5 .wp-caption-text,
+	.gallery-columns-6 .wp-caption-text {
+		display: none;
+	}
+}
+
+
+/**
+ * One + Two Columns Gallery
+ */
+.gallery-1-2 {
+	margin: 32px -5px;
+	
+	> .gallery {
+		margin: 0;
+	}
+	
+	img {
+		display: block;
+	}
+	
+	.gallery-item {
+		position: relative;
+		display: block;
+		box-sizing: border-box;
+		width: 50%;
+		max-width: 100%;
+		padding: 5px;
+		float: left;
+		
+		&:hover .gallery-caption {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	.gallery-item:nth-child(3n+1) {
+		width: 100%;
+	}
+
+	.gallery-caption {
+		position: absolute;
+		overflow: hidden;
+		opacity: 0;
+		visibility: hidden;
+		padding: 7px 10px;
+		background: rgba(#111, 0.7);
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 5px;
+		color: #fff;
+		font-size: 12px;
+		transition: all .3s ease-in;
+	}
+}
+
+/**
+ * Gallery slider
+ */ 
+.gallery-slider {
+	visibility: hidden;
+	margin-bottom: 36px;
+	
+	&.slick-initialized {
+		visibility: visible;
+	}
+
+	img {
+		@extend %wp-post-image;
+	} 
+	
+	.slick-slide {
+		position: relative;
+		
+		img {
+			margin-bottom: 0 !important;
+		}
+	}
+
+	.caption {
+		position: absolute;
+		padding: 7px 10px;
+		background: rgba(#111, 0.7);
+		bottom: 0;
+		left: 0;
+		right: 0;
+		color: #fff;
+		font-size: 12px;
+		font-style: italic;
+	}
+
+}

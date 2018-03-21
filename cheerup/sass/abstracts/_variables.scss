@@ -1,0 +1,23 @@
+// Configuration varaibles for the SASS
+
+// Fonts & Typography
+$body-font: "Merriweather", Georgia, serif;
+$title-font: Poppins, Arial, sans-serif;
+$text-font: $body-font;
+$root-font-size: 14px;
+
+// Accent color
+$main-color: #318892;
+
+// Default content text color
+$post-text-color: #454545;
+
+// Media query breakpoints
+$mq-breakpoints: (
+	'x-large': 1201px,
+	'large': 1200px,
+	'medium': 940px,
+	'small': 767px,
+	'x-small': 480px,
+	'tiny': 350px,
+);

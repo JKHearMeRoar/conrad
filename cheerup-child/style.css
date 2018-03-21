@@ -1,0 +1,40 @@
+/*
+Theme Name: CheerUp Child
+Theme URI: http://theme-sphere.com/
+Description: A child theme of CheerUp
+Author: ThemeSphere
+Author URI: http://theme-sphere.com
+Template: cheerup
+Version: 1.1
+*/
+
+.post-thumb .format-video > .fa {
+	margin-top: 7px;
+}
+
+.the-post .author-box .image img {
+	background-color: #fff;
+	border-radius: 0;
+}
+
+.post-share-float .pinterest {
+	display: none;
+}
+
+.post-share-icons > a:nth-child(4),
+.post-share-icons > a:nth-child(5) {
+	display: none;
+}
+
+#search-2 h5 {
+	display: none;
+}
+
+#search-2 input {
+	border-top-color: #0099cc;
+	font-size: 15px;
+}
+
+#search-2 .widget_search button {
+	margin-top: -41px;
+}

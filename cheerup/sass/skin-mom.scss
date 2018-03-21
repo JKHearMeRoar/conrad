@@ -1,0 +1,730 @@
+/**
+ * Skin: Mom / Parents
+ */
+
+// Note: Mom skin uses selector override method on top of base CSS styling from style.scss
+
+// Import essentials
+@import 'abstracts/_variables';
+@import 'abstracts/_utils';
+
+// Variables for this skin
+$skin-font: Lato, Arial, sans-serif;
+$skin-font-alt: Montserrat, Arial, sans-serif;
+$skin-color: #00a5b2;
+$special-title-font: "Arima Madurai", Palatino, serif;
+$skin-font-meta: "Segoe UI", Lato, Roboto, sans-serif;
+
+//
+// Fonts
+//
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/lato2/lato-semibold-webfont.woff2') format('woff2'),
+         url('fonts/lato2/lato-semibold-webfont.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+
+// Mixin
+@mixin special-title {
+	font-family: $special-title-font;
+	font-weight: 600;
+	color: #000;
+}
+
+
+@mixin bold-title {
+	font-weight: 600;
+}
+
+// Base overrides
+@import 'skins/mom-base';
+
+
+/**
+ * Header and Nav
+ */
+
+.top-bar-content {
+	font-family: $skin-font-alt;
+
+	.search-field {
+		font-family: inherit;
+	}
+}
+
+.main-head.nav-below { 
+	.top-bar-content {
+		background: $skin-color;
+		border-color: $skin-color;
+		color: #fafafa;
+	}
+
+	.cart-action {
+		margin-left: 9px;
+	}
+
+	.cart-action a,
+	.search-field,
+	.search-submit {
+		color: inherit;
+	}
+
+	.search-submit {
+		font-size: 15px;
+	}
+
+	.search-field {
+		width: 65px;
+		margin-left: 5px;
+		font-size: 12px;
+		font-weight: 500;
+	}
+
+	.social-icons a {
+		color: inherit;
+	}
+}
+
+.dark .cart-link .counter {
+	padding-top: 2px;
+	background: #fff;
+	color: #5e5e5e;
+	font-weight: 600;
+}
+
+.navigation {
+	font-family: $skin-font-alt;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	color: #535353; 
+
+	.menu > li:first-child {
+		//margin-left: -19px;
+	}
+	
+	.menu > li > a {
+		//padding: 0 19px;
+	}
+	
+	.menu > li li a,
+	.mega-menu .sub-cats a {
+		letter-spacing: 0.1em;
+	}
+	
+	.mega-menu .recent-posts .post-title {
+		font-family: $skin-font;
+		font-size: 15px;
+		letter-spacing: 0;
+	}
+}
+
+.navigation.below {
+	font-size: 14px;
+	line-height: 52px;
+	height: 52px;
+	border-top-color: #e6e6e6;
+	border-bottom-color: #e6e6e6;
+}
+
+.navigation.dark {
+	font-weight: 400;
+	
+	.menu > li > a,
+	.menu > .current-menu-item > a, 
+	.menu > .current-menu-parent > a,
+	.menu > .current-menu-ancestor > a {
+		color: #fff;
+	}
+	
+	.menu li:hover > a,
+	.menu li li:hover > a,
+	.menu li:hover > a:after {
+		color: $skin-color;
+	}
+	
+	.menu > li li a {
+		//border-color: rgba(187, 187, 187, 0.15);
+	}
+
+	.menu > li li a,
+	.mega-menu .sub-cats a {
+		color: #eee;
+		font-weight: 400;
+	}
+
+	.mega-menu .recent-posts .post-title {
+		color: #eee;
+		//font-weight: 400;
+	}
+}
+
+.mobile-menu li a {
+	letter-spacing: 0.12em;
+}
+
+.head-nav-below + .carousel-slider {
+	margin-top: 48px;
+}
+
+
+/**
+ * General components and global changes
+ */
+
+%read-more-btn {
+	padding: 12px 19px;
+	border: 1px solid #ddd;
+	color: #555;
+	background: transparent;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+::selection { 
+	background: rgba($skin-color, 0.2);
+}
+
+::-moz-selection {
+	background: rgba($skin-color, 0.2);
+}
+
+input[type="submit"], 
+button, input[type="button"], 
+.button {
+	font-size: 13px;
+	letter-spacing: 0.1em;
+}
+
+input,
+textarea,
+select {
+	color: #9c9c9c;
+}
+
+.modern-quote {
+	@include breakpoint(false, large) {
+		font-size: 32px;
+	}
+}
+
+blockquote {
+	font-family: $special-title-font;
+	font-size: 21px;
+	color: #989898;
+}
+
+.section-head {
+	.title {
+		@include bold-title;
+		font-size: 13px;
+		letter-spacing: 0.1em;
+		color: #161616;
+	}
+}
+ 
+.post-meta {
+	font-size: 11px;
+	font-family: $skin-font-meta;
+
+	.text-in {
+		display: none;
+	}
+
+	.post-cat > a {
+		letter-spacing: 0.12em;
+	}
+	
+	time {
+		color: #aaa;
+		font-weight: 400;
+	}
+
+	time,
+	.comments {
+		letter-spacing: 0.11em;
+	}
+}
+
+.post-meta-b {
+
+	.post-title-alt {
+		margin: 18px 0;
+	}
+}
+
+.post-title,
+.post-title-alt {
+	@include special-title;
+	line-height: 1.4;
+
+	.post-cat > a {
+		font-size: 12px;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	a {
+		color: #000;
+	}
+}
+
+.post-title-alt {
+	margin-top: 16px;
+	margin-bottom: 16px;
+	font-size: 29px;
+	
+	@include breakpoint(x-small) {
+		font-size: 24px;
+	}
+	
+	&:after {
+		display: none;
+	}
+}
+
+.text,
+.post-content,
+.textwidget {
+	font-size: 14px;
+	line-height: 1.86;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+// Pagination changes
+.main-pagination {
+	.next a,
+	.previous a {
+		letter-spacing: 0.15em;
+	}
+
+	.load-button {
+		min-width: initial;
+		padding: 2px 60px;
+		background: #fff;
+		font-weight: 800;
+		letter-spacing: 0.075em;
+	}
+
+	&.load-more {
+		margin-top: 80px;
+	}
+}
+
+/**
+ * Posts adjustments
+ */
+
+.social-share {
+	li {
+		margin-right: 12px;
+		font-size: 14px;
+	}
+
+	a {
+		color: #111;
+	}
+}
+
+.likes-count {
+	color: #555;
+
+	&:before {
+		color: $skin-color;
+	}
+
+	.number {
+		margin-left: 5px;
+	}
+}
+
+// Large Post 
+.large-post { 
+	.featured img {
+		margin-bottom: 30px;
+	}
+	
+	.author {
+		letter-spacing: 0;
+	}
+}
+
+.large-post-b {
+	.read-more a {
+		@extend %read-more-btn;
+		
+		&:hover {
+			background: #000;
+			color: #fff;
+		}
+			
+		&:before {
+			display: none;
+		}
+		
+		span {
+			padding: 0;
+			background: transparent;
+		}
+	}
+}
+
+.large-post-b .post-footer {
+	letter-spacing: 0;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #ebebeb;
+	
+	.author a {
+		letter-spacing: 0.15em;
+	}
+	
+	.number {
+		font-size: 13px;
+		font-weight: 400;
+	}
+	
+	.social-icons a {
+		font-size: 14px;
+	}
+}
+
+.post-footer {
+	margin-top: 45px;
+	
+	.read-more {
+		font-size: 11px;
+		font-weight: 900;
+		letter-spacing: 0.1em;
+	}
+}
+
+.list-post {
+
+	.post-excerpt {
+		font-size: 14px;
+	}
+
+	.post-title {
+		// 1200px+
+		@include breakpoint(false, large) {
+			font-size: 26px;
+			max-width: 90%;
+		}
+	}
+}
+
+// List post b
+.list-post-b {
+
+	.read-more-btn {
+		@extend %read-more-btn;
+	}
+}
+
+.grid-post { 
+	.post-title-alt {
+	//	font-size: 32px;
+	}
+
+	.post-meta-b {
+		margin-top: 28px;
+		margin-bottom: 20px;
+	}
+
+	.post-footer {
+		margin-top: 34px;
+	}
+
+	.post-excerpt {
+		text-align: center;
+	}
+
+	.post-meta-a,
+	.post-meta-b {
+		.post-title-alt {
+			@include breakpoint(false, large) {
+				max-width: 90%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+}
+
+// Grid Post B
+.grid-post-b .read-more-btn {
+	@extend %read-more-btn;
+}
+
+
+/* Single Post */
+
+.single-cover .overlay .post-by {
+	font-weight: 600;
+	letter-spacing: 0.12em;
+}
+
+.post-content {
+	font-size: 15px;
+	font-weight: 400;
+	
+	h1, h2, h3, h4, h5, h6 {
+		@include bold-title;
+	}
+}
+
+.tag-share {
+	.post-tags a {
+		letter-spacing: 0.1em;
+		font-weight: 700;
+	}
+}
+
+.post-share-icons a {
+	color: #161616;
+}
+
+
+.author-box {
+	.author > a {
+		font-size: 22px;
+	}
+}
+
+.related-posts {
+	.post-title {
+		font-family: $skin-font;
+		font-size: 15px;
+		font-weight: 600;
+		letter-spacing: 0;
+	}
+	
+	.post-meta {
+		font-size: 10px;
+	}
+}
+
+
+/**
+ * Home & Archives changes
+ */
+.block-heading .title {
+	font-size: 15px;
+}
+
+.subscribe-box {
+	margin-top: -15px;
+	padding-left: 27px;
+	padding-right: 32px;
+
+	.text {
+		font-size: 14px;
+	}
+
+	.input {
+		height: (41/13) * 1em;
+		width: 270px;
+
+		@include breakpoint(false, small) {
+			margin-right: 15px;
+		}
+	}
+
+	.button {
+		font-size: 13px;
+		width: auto;
+		padding: 14px 34px;
+		vertical-align: top;
+	}
+}
+
+.posts-carousel {
+	
+	.post-link {
+		margin-bottom: 18px;
+	}
+	
+	.post-title {
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	.post-meta {
+		font-size: 10px;
+	}
+	
+}
+
+// Default / Stylish slider
+.slider-overlay {
+	.heading {
+		font-family: $special-title-font;
+		font-weight: 400;
+		letter-spacing: 0;
+	}
+	
+	.excerpt {
+		font-size: 14px;
+		letter-spacing: 0;
+	}
+}
+
+// Fashion slider
+.common-slider {
+	.post-title,
+	.heading {
+		@include special-title;
+		line-height: 1.4;
+	}
+}
+
+.carousel-slider {
+
+	.heading {
+		margin-top: 10px;
+		margin-bottom: 2px;
+		font-weight: 500;
+	}
+
+	.category {
+		padding: 8px 11px;
+		font-family: $skin-font-meta;
+		font-size: 11px;
+		font-weight: 600;
+		letter-spacing: 0.12em;
+	}
+}
+
+.fashion-slider {
+	.post-title {
+		// From 1200px+
+		@include breakpoint(false, large) {
+			font-size: 36px;
+		}
+	}
+}
+
+
+/**
+ * Sidebar adjustments
+ */
+ .sidebar {
+	.widget-title {
+		@include special-title;
+		border: 0;
+		color: $skin-color;
+		text-transform: none;
+		font-size: 21px;
+		font-weight: 500;
+		letter-spacing: 0;
+		line-height: 1.2;
+		
+		&:after {
+			content: "";
+			display: block;
+			margin: 0 auto;
+			margin-top: 10px;
+			width: 36px;
+			border-bottom: 2px solid $skin-color;
+		}
+	}
+	
+	
+	.widget_mc4wp_form_widget,
+	.widget-subscribe {
+		background: #f7f7f7;
+		
+		.widget-title {
+			font-family: $skin-font;
+			font-size: 12px;
+			font-weight: 800;
+			letter-spacing: 0.075em;
+			color: #161616;
+			line-height: 1;
+			text-transform: uppercase;
+			
+			&:after {
+				margin-top: 18px;
+				width: 18px;
+				border-bottom: 0;
+			}
+		}
+	}
+}
+
+
+.widget-posts {
+	.post-title {
+		font-size: 15px;
+		font-weight: 600;
+		line-height: 1.6;
+		letter-spacing: 0;
+	}
+	
+	.posts.large {
+		.post-title {
+			font-size: 16px;
+			font-weight: 600;
+			-webkit-font-smoothing: antialiased;
+		}
+	}
+}
+
+.widget .mc4wp-form, 
+.widget-subscribe {
+	.message {
+		letter-spacing: 0;
+	}
+}
+
+.widget-about {
+	.more {
+		color: #161616;
+		font-weight: 700;
+	}
+}
+
+/* Footer Changes */
+.upper-footer {
+	
+	.widget-title {
+		padding-bottom: 9px;
+		color: $skin-color;
+		font-family: $special-title-font;
+		font-size: 21px;
+		font-weight: 500;
+		text-transform: none;
+	}
+	
+	.widget-posts .post-meta {
+		color: #707070;
+	}
+
+	.widget-about .about-text {
+		font-size: 14px;
+	}
+}
+
+.lower-footer {
+	.copyright {
+		font-size: 13px;
+	}
+	
+	.social-icons {
+		letter-spacing: 0.12em;
+	}
+}
+
+.main-footer.dark {
+
+	.post-title,
+	.product-title {
+		font-weight: 500;
+		-webkit-font-smoothing: initial;
+	}
+}

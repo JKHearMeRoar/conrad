@@ -1,0 +1,78 @@
+/**
+ * Classes: WordPress Defaults
+ */
+
+.alignnone { 
+	margin: 40px 0; 
+}
+
+.alignright, 
+a img.alignright {
+	float: right;
+	margin: 4px 0 20px 30px;
+
+	@include breakpoint(small) {
+		max-width: 50%;
+	}
+}
+
+.alignleft, 
+a img.alignleft {
+	float: left;
+	margin: 4px 30px 20px 0;
+    
+	@include breakpoint(small) {
+		max-width: 50%;
+	}
+}
+
+.aligncenter, 
+div.aligncenter {
+    display: block;
+    margin: 40px auto;
+}
+
+p img.alignnone,
+img.alignnone {
+	display: block;
+	margin: 40px 0;
+}
+
+.wp-caption {
+	max-width: 100%;
+}
+
+.wp-caption-text {
+	margin-top: 5px;
+	font-style: italic;
+	font-size: 0.923em;
+	text-align: center;
+	color: #b4b4b4;
+}
+
+// Add some margins to prevent text crowding on left and right
+// aligned images with caption.
+.alignright,
+.alignleft {
+	.wp-caption-text {
+		//margin-bottom: 10px;
+		font-size: 0.9em;
+	}
+}
+
+// Full-width modifications
+.no-sidebar {
+	
+	// Force wrappers - div,p, and so on to auto width in full width mode
+	// !important required to override inline style added by WP
+	//
+	// Note: Images don't use inline styles in WP  
+	.alignnone:not(img) {
+		width: auto !important;
+	}
+	
+	.alignnone img,
+	img.alignnone {
+		width: auto;
+	}
+}
