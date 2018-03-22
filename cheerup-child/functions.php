@@ -98,6 +98,9 @@ function add_analytics_tracking_to_urls_vc($content) {
 add_filter('the_content', 'add_analytics_tracking_to_urls');
 add_filter('the_content', 'add_analytics_tracking_to_urls_vc');
 
+// Add 100x100 thumbnail for newsletter use
+add_image_size('newsletter', 100, 100, true);
+
 /**
  * Enqueue the CSS. Please note the CSS order is as follows:
  *
