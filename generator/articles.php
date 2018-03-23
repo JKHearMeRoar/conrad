@@ -12,6 +12,7 @@ require_once('../wp-blog-header.php');
 header("HTTP/1.1 200 OK");
 
 $fontFamily = "'Trebuchet MS', sans-serif";
+$blacklist = array();
 
 $html = '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="padding-top: 20px;padding-bottom: 20px;padding-right: 20px;">';
@@ -28,28 +29,41 @@ function inputParametersCheck($getCampaign, $getCategory, $getNum) {
 	}
 
 	// check for blog post category - if empty, show general
-	// expecting edu / mro / rd / ga
+	// expecting edu / mro / rd / ga / mix
 
-	if(isset($getCategory) && ($getCategory == "edu" || $getCategory == "mro" || $getCategory == "rd" || $getCategory == "ga")) {
+	if(isset($getCategory) && ($getCategory == "edu" || $getCategory == "mro" || $getCategory == "rd" || $getCategory == "ga" || $getCategory == "mix")) {
 		$category = $getCategory;
 	} else {
-		$category = "ga";
+		$category = "mix";
 	}
 
 	// define how many posts need to be generated
 	// expecting number lower or equal then 10 but greater then 0
+	// default value is 3 for specific category od 1 for mixed
 
-	if( isset($getNum) && is_numeric($getNum) && $getNum <= 10 && $getNum > 0) {
+	if(isset($getNum) && is_numeric($getNum) && $getNum <= 10 && $getNum > 0) {
 		$num = $getNum;
+	} elseif((!isset($getNum) || !is_numeric($getNum) || $getNum > 10 || $getNum < 1) && $category == "mix") {
+		$num = 1;
 	} else {
 		$num = 3;
 	}
+
+	if($category == "mix") {
+		fetchPosts("edu", $num);
+		fetchPosts("mro", $num);
+		fetchPosts("rd", $num);
+		fetchPosts("ga", $num);
+	} else {
+		fetchPosts($category, $num);
+	}
+
 
 }
 
 function fetchPosts($category, $num) {
 
-	global $html, $campaign, $category, $fontFamily;
+	global $html, $campaign, $fontFamily, $blacklist;
 	
 	// blog categories by ID
 	$categories = array(
@@ -69,7 +83,8 @@ function fetchPosts($category, $num) {
 	// https://codex.wordpress.org/Class_Reference/WP_Query
 	$args = array(
 		'posts_per_page' => $num, 
-		'cat' => $categories[$category]
+		'cat' => $categories[$category],
+		'post__not_in' => $blacklist
 	);
 
 	$q = new WP_Query($args);
@@ -77,6 +92,7 @@ function fetchPosts($category, $num) {
 	if ($q->have_posts()) {
 		while ($q->have_posts()) {
 		$q->the_post();        
+		    $blacklist[] = get_the_ID();
 		    $post_excerpt = preg_replace('/\[.*?\]/','', get_the_excerpt());
 		    $url = get_the_permalink().'?utm_source=' . $utmSource . '&utm_medium=' . $utmMedium . '&utm_campaign=' . $campaign . '&utm_content=' . $utmContent;
 		    $html.='
@@ -103,7 +119,6 @@ function fetchPosts($category, $num) {
 }
 
 inputParametersCheck(htmlspecialchars($_GET["utm_campaign"], ENT_QUOTES), htmlspecialchars($_GET["category"], ENT_QUOTES), htmlspecialchars($_GET["num"], ENT_QUOTES));
-fetchPosts($category, $num);
 
 $html.='
 </table>
