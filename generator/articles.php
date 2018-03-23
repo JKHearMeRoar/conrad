@@ -8,13 +8,13 @@
 // load WordPress
 define('WP_USE_THEMES', false);
 require_once('../wp-blog-header.php'); 
+// send OK header - otherwise page returns 404 and content scrape is unsuccessful
+header("HTTP/1.1 200 OK");
 
 $fontFamily = "'Trebuchet MS', sans-serif";
 
-$html = '
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<table cellpadding="0" cellspacing="0" border="0" width="100%" style="padding-top: 20px;padding-bottom: 20px;padding-right: 20px;">
-';
+$html = '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="padding-top: 20px;padding-bottom: 20px;padding-right: 20px;">';
 
 function inputParametersCheck($getCampaign, $getCategory, $getNum) {
 	global $campaign, $category, $num;
