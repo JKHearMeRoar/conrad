@@ -105,7 +105,7 @@ function fetchPosts($category, $num) {
 					<a href="'.$url.'" style="font-family: '.$fontFamily.';color: #19a8df; text-decoration: none; font-weight: bold; font-size: 18px;">'.get_the_title().'</a>
 		            <br /><br />
 		            <span style="font-family: '.$fontFamily.';color: #626262; font-size: 14px;">'.$post_excerpt.'</span><br />
-		            <p style="text-align: right;"><a href="'.$url.'" style="font-family: '.$fontFamily.';color: #626262; font-size: 14px;text-decoration: none;font-weight: bold;">Přejít na celý článek »</a></p>
+		            <p style="text-align: right;"><a href="'.$url.'" style="font-family: '.$fontFamily.';color: #626262; font-size: 14px;text-decoration: none;font-weight: bold;">Pokračovat ve čtení »</a></p>
 		        </td>
 			</tr>
 			<tr><td colspan="3" style="line-height: 8px; height: 8px; margin: 0px; padding: 0px;"></td></tr>
