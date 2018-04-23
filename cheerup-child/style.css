@@ -38,3 +38,7 @@ Version: 1.1
 #search-2 .widget_search button {
 	margin-top: -41px;
 }
+
+.min180 {
+	min-height: 180px;
+}
