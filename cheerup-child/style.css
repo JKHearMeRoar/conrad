@@ -42,3 +42,14 @@ Version: 1.1
 .min180 {
 	min-height: 180px;
 }
+
+.post-content ul,
+.post-content ol {
+	margin-left: 0px;
+}
+
+.post-content ul li {
+	display: block;
+    padding-left: 30px;
+    background: url(img/check.png) 0 6px no-repeat;
+}
