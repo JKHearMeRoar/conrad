@@ -43,12 +43,15 @@ Version: 1.1
 	min-height: 180px;
 }
 
-.post-content ul,
-.post-content ol {
+.post-content .ccheck ul,
+.post-content .ccheck ol,
+.page-content .ccheck ul,
+.page-content .ccheck ol {
 	margin-left: 0px;
 }
 
-.post-content ul li {
+.post-content .ccheck ul li,
+.page-content .ccheck ul li {
 	display: block;
     padding-left: 30px;
     background: url(img/check.png) 0 6px no-repeat;
