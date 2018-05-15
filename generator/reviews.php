@@ -11,11 +11,10 @@ require_once('../wp-blog-header.php');
 // send OK header - otherwise page returns 404 and content scrape is unsuccessful
 header("HTTP/1.1 200 OK");
 
-$fontFamily = "'Trebuchet MS', sans-serif";
 $blacklist = array();
 
 $html = '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<table cellpadding="0" cellspacing="0" border="0" width="100%" style="padding-top: 20px;padding-bottom: 20px;padding-right: 20px;">';
+<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="padding: 10px 0px 10px 0px;"><table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td style="font-family: Tahoma, sans-serif; font-size: 18px; color: #ffffff; padding: 0px 10px 0px 10px; height: 35px;" bgcolor="#009fda">Aktuální recenze a testy</td></tr></table></td></tr>';
 
 function inputParametersCheck($getCampaign, $getCategory, $getNum) {
 	global $campaign, $category, $num;
@@ -28,10 +27,10 @@ function inputParametersCheck($getCampaign, $getCategory, $getNum) {
 		$campaign = "";
 	}
 
-	// check for blog post category - if empty, show general
-	// expecting edu / mro / rd / ga / mix
+	// check for blog post category - if empty, show mix
+	// expecting review / test / mix
 
-	if(isset($getCategory) && ($getCategory == "tests" || $getCategory == "reviews" || $getCategory == "mix")) {
+	if(isset($getCategory) && ($getCategory == "review" || $getCategory == "test" || $getCategory == "mix")) {
 		$category = $getCategory;
 	} else {
 		$category = "mix";
@@ -39,7 +38,7 @@ function inputParametersCheck($getCampaign, $getCategory, $getNum) {
 
 	// define how many posts need to be generated
 	// expecting number lower or equal then 10 but greater then 0
-	// default value is 3 for specific category od 1 for mixed
+	// default value is 2 for specific category or 1 for mixed
 
 	if(isset($getNum) && is_numeric($getNum) && $getNum <= 10 && $getNum > 0) {
 		$num = $getNum;
@@ -50,8 +49,8 @@ function inputParametersCheck($getCampaign, $getCategory, $getNum) {
 	}
 
 	if($category == "mix") {
-		fetchPosts("tests", $num);
-		fetchPosts("reviews", $num);
+		fetchPosts("review", $num);
+		fetchPosts("test", $num);
 	} else {
 		fetchPosts($category, $num);
 	}
@@ -65,15 +64,14 @@ function fetchPosts($category, $num) {
 	
 	// blog categories by ID
 	$categories = array(
-		'tests' => 78, 
-		'reviews' => 77 
+		'review' => 77, 
+		'test' => 78
 	);
 
 	// utm settings
 	$utmSource = "newsletter";
 	$utmMedium = "email";
-	$utmCampain = $campaign;
-	$utmContent = "blog-recenze";
+	$utmCampaign = "btcreviews";
 
 	// arguments for WordPress query
 	// https://codex.wordpress.org/Class_Reference/WP_Query
@@ -90,23 +88,24 @@ function fetchPosts($category, $num) {
 		$q->the_post();        
 		    $blacklist[] = get_the_ID();
 		    $post_excerpt = preg_replace('/\[.*?\]/','', get_the_excerpt());
-		    $url = get_the_permalink().'?utm_source=' . $utmSource . '&utm_medium=' . $utmMedium . '&utm_campaign=' . $campaign . '&utm_content=' . $utmContent;
+		    $url = get_the_permalink().'?utm_source=' . $utmSource . '&utm_medium=' . $utmMedium . '&utm_campaign=' . $utmCampaign;
 		    $html.='
 		    <tr>
-				<td width="100" valign="top" margin="0" padding="0">
-					<a href="'.$url.'"><img width="100" height="100" src="'.get_the_post_thumbnail_url($post->ID, "newsletter").'" border="0"></a>
+				<td align="center" style="border-top: 1px solid #dddddd;">
+					<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+						<tr>
+							<td style="padding: 10px 5px 10px 10px;width: 80px;" valign="top" align="center">
+								<a href="'.$url.'"><img width="80" height="80" src="'.get_the_post_thumbnail_url($post->ID, "newsletter").'" border="0" alt="" style="display: inline-block;"></a>
+							</td>
+							<td style="padding: 10px 10px 10px 5px; font-family: Tahoma, sans-serif; font-size: 11px; line-height: 15px; color: #000000;" align="left">
+								<a href="'.$url.'" style="color: #0098dd; color: #0098dd !important;">'.get_the_title().'</a><br/><br/>
+								'.$post_excerpt.'<br/><br/>
+								<a href="'.$url.'" style="color: #0098dd; color: #0098dd !important;">Pokračovat ve čtení &raquo;</a>
+							</td>
+						</tr>
+					</table>
 				</td>
-				<td width="25" margin="0" padding="0"></td>
-				<td valign="top" margin="0" padding="0">
-					<a href="'.$url.'" style="font-family: '.$fontFamily.';color: #19a8df; text-decoration: none; font-weight: bold; font-size: 18px;">'.get_the_title().'</a>
-		            <br /><br />
-		            <span style="font-family: '.$fontFamily.';color: #626262; font-size: 14px;">'.$post_excerpt.'</span><br />
-		            <p style="text-align: right;"><a href="'.$url.'" style="font-family: '.$fontFamily.';color: #626262; font-size: 14px;text-decoration: none;font-weight: bold;">Pokračovat ve čtení »</a></p>
-		        </td>
 			</tr>
-			<tr><td colspan="3" style="line-height: 8px; height: 8px; margin: 0px; padding: 0px;"></td></tr>
-		    <tr><td colspan="3" style="line-height: 1px; height: 1px; background-color: #d5d5d5; margin: 0px; padding: 0px;"></td></tr>
-		    <tr><td colspan="3" style="line-height: 8px; height: 8px; margin: 0px; padding: 0px;"></td></tr>
 		    ';
 		}
 		wp_reset_postdata();
