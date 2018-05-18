@@ -30,7 +30,7 @@ function inputParametersCheck($getCampaign, $getCategory, $getNum) {
 	// check for blog post category - if empty, show mix
 	// expecting review / test / mix
 
-	if(isset($getCategory) && ($getCategory == "review" || $getCategory == "test" || $getCategory == "mix")) {
+	if(isset($getCategory) && ($getCategory == "review" || $getCategory == "mix")) {
 		$category = $getCategory;
 	} else {
 		$category = "mix";
@@ -43,14 +43,15 @@ function inputParametersCheck($getCampaign, $getCategory, $getNum) {
 	if(isset($getNum) && is_numeric($getNum) && $getNum <= 10 && $getNum > 0) {
 		$num = $getNum;
 	} elseif((!isset($getNum) || !is_numeric($getNum) || $getNum > 10 || $getNum < 1) && $category == "mix") {
-		$num = 1;
+		$num = 2;
 	} else {
 		$num = 2;
 	}
 
 	if($category == "mix") {
 		fetchPosts("review", $num);
-		fetchPosts("test", $num);
+		// fetchPosts("test", $num);
+		// review and test categories were merged
 	} else {
 		fetchPosts($category, $num);
 	}
@@ -64,8 +65,7 @@ function fetchPosts($category, $num) {
 	
 	// blog categories by ID
 	$categories = array(
-		'review' => 77, 
-		'test' => 78
+		'review' => 78
 	);
 
 	// utm settings
