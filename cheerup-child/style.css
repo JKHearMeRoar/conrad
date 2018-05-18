@@ -56,3 +56,13 @@ Version: 1.1
     padding-left: 30px;
     background: url(img/check.png) 0 6px no-repeat;
 }
+
+.main .post-content h1, 
+.main .post-content h2, 
+.main .post-content h3, 
+.main .post-content h4, 
+.main .post-content h5, 
+.main .post-content h6 {
+	margin-top: 1.0em;
+    margin-bottom: 0.8em;
+}
