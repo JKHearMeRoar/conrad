@@ -36,6 +36,23 @@ add_action('wp_head', 'google_analytics_tracking_code_head', 1);
 // include GA tracking code before the closing body tag
 add_action('bunyad_begin_body', 'google_analytics_tracking_code_body', 1);
 
+// include OneSignal Push notification integration
+function onesignal_integration_code_head(){ ?>
+
+<link rel="manifest" href="/manifest.json" />
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "38edddb2-398a-4583-9474-7b93f2f31fc7",
+    });
+  });
+</script>
+
+<?php }
+
+add_action('wp_head', 'onesignal_integration_code_head', 5);
 
 // include UTM Tracking for links going to Conrad Eshop
 function add_analytics_tracking_to_urls($content) {
