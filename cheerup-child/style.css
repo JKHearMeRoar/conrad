@@ -66,3 +66,7 @@ Version: 1.1
 	margin-top: 1.0em;
     margin-bottom: 0.8em;
 }
+
+.slick-slider .slider-overlay .read-more {
+	margin-top: -15px;
+}
