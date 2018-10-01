@@ -67,6 +67,10 @@ Version: 1.1
     margin-bottom: 0.8em;
 }
 
+.slick-slider .slider-overlay .excerpt {
+	display: none;
+}
+
 .slick-slider .slider-overlay .read-more {
-	margin-top: -15px;
+	margin-top: 10px;
 }
