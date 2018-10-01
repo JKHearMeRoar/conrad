@@ -117,6 +117,7 @@ add_filter('the_content', 'add_analytics_tracking_to_urls_vc');
 
 // Add 100x100 thumbnail for newsletter use
 add_image_size('newsletter', 100, 100, true);
+add_image_size('newsletter170', 170, 170, true);
 
 /**
  * Enqueue the CSS. Please note the CSS order is as follows:
@@ -153,3 +154,17 @@ add_action('wp_enqueue_scripts', 'my_cheerup_enqueue_child', 11);
 
 // Disable parent CSS enqueue
 add_filter('bunyad_enqueue_core_css', '__return_false');
+
+/**
+ * Custom RSS for Conrad Eshop
+ */
+
+add_action('init', 'customRSS');
+
+function customRSS(){
+	add_feed('shop', 'customRSSFunc');
+}
+
+function customRSSFunc(){
+	get_template_part('rss', 'shop');
+}
