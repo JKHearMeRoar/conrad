@@ -1,0 +1,282 @@
+/**
+ * Skin: Classic
+ */
+
+// Note: Classic (Typekit) skin uses selector override method on top of base CSS styling from style.scss
+
+// Import essentials
+@import 'abstracts/_variables'; 
+@import 'abstracts/_utils';
+
+// Variables for this skin
+$skin-font: "brandon-grotesque", sans-serif;
+$skin-color: #f6b2ca;
+$skin-text-font: ff-meta-serif-web-pro, Georgia, serif; 
+
+// Mixin
+@mixin special-title {
+	font-family: $special-title-font;
+	font-weight: 400;
+	color: #161616;
+}
+
+@mixin bold-title {
+	font-weight: 900;
+	letter-spacing: 0.1em;
+}
+
+
+// Base overrides - extends general skin
+@import 'skin-general';
+@import 'skins/typekit-base';
+
+
+.text,
+.textwidget,
+.post-content {
+	color: #606060;
+}
+
+/**
+ * General components and global changes
+ */
+
+input,
+select {
+	font-size: 14px;
+	height: (37 / 14) * 1em;
+}
+
+textarea {
+	font-size: 14px;
+}
+
+blockquote {
+	font-size: 18px;
+	-webkit-font-smoothing: antialiased;
+	
+	cite {
+		font-size: 13px;
+	}
+}
+
+.text,
+.textwidget,
+.post-content {
+	font-size: 15px;
+	line-height: 1.8;
+	letter-spacing: 0;
+	
+	@include breakpoint(small) {
+		font-size: 14px;
+	}
+}
+
+.post-footer .author {
+	font-size: 13px;
+}
+
+.subscribe-box .text {
+	font-size: 14px;
+}
+
+.slider-overlay {
+	.excerpt {
+		font-size: 14px;
+		letter-spacing: 0;
+	}
+}
+
+// Bigger post meta
+.posts-carousel .post-meta,
+.related-posts .post-meta {
+	font-size: 10px;
+}
+
+
+/**
+ * Posts adjustments
+ */
+.post-content {
+	font-size: 16px;
+	
+	@include breakpoint(small) {
+		font-size: 15px;
+	}
+}
+
+/**
+ * Sidebar adjustments
+ */
+ 
+.widget .mc4wp-form .message,
+.widget-subscribe .message {
+	font-size: 14px;
+}
+
+.widget_categories,
+.widget_product_categories,
+.widget_archive {
+	a {
+		font-size: 15px;
+	}
+}
+
+.widget_links, 
+.widget_meta, 
+.widget_recent_comments, 
+.widget_recent_entries, 
+.widget_rss, 
+.widget_pages, 
+.widget_nav_menu {
+	li {
+		font-size: 15px;
+	}
+}
+
+.widget-posts { 
+	.excerpt > p {
+		font-size: 14px;
+	}
+}
+
+.widget_calendar {
+	tr td,
+	th td {
+		font-size: 13px;
+	}
+}
+
+.tagcloud a {
+	font-size: 13px !important;
+}
+
+
+/**
+ * Footer changes
+ */
+ 
+.upper-footer {
+	.widget-about .about-text {
+		font-size: 14px;
+	}
+}
+
+
+.lower-footer {
+	font-size: 13px;
+}
+
+/**
+ * WooCommerce adjustments
+ */
+.woocommerce {
+	.woocommerce-message,
+	.woocommerce-error,
+	.woocommerce-info {
+		font-size: 15px;
+	}
+	
+	form {
+		.form-row {
+			font-size: 14px;
+		}
+	}
+	
+	#reviews ol.commentlist .description {
+		font-size: 15px;
+	}
+	
+	#payment ul.payment_methods,
+	#payment div.payment_box {
+		font-size: 14px;
+	}
+}
+
+.woocommerce-cart {
+	.cart-collaterals .cart_totals {
+		tr th,
+		tr td {
+			font-size: 14px;
+		}
+	}
+	
+	.cart-empty {
+		font-size: 15px;
+	}
+}
+
+
+// Few Windows Adjustments
+.is-win {
+	
+	.navigation a,
+	.sidebar .widget-title,
+	.widget-cta .label,
+	.section-head .title,
+	.post-footer .read-more-link,
+	.widget-posts .post-title,
+	.widget .product-title,
+	.products-block .more-link,
+	.main-pagination,
+	.tag-share .post-tags a,
+	.author-box .author > span {
+		-webkit-text-stroke: 0.2px;
+	}
+	
+	.navigation a:after {
+		-webkit-text-stroke: 0;
+	}
+	
+	input,
+	textarea,
+	select,
+	.text,
+	.post-content,
+	.textwidget,
+	.mid-footer .overlay,
+	.lower-footer,
+	.post-footer .author,
+	.slider-overlay .excerpt,
+	.mc4wp-alert,
+	.widget_archive li,
+	.widget_meta li,
+	.widget_recent_comments li,
+	.widget_recent_entries li,
+	.widget_pages li,
+	.widget_nav_menu li,
+	.widget_categories a,
+	.widget_product_categories a,
+	.widget_archive a,
+	.woocommerce .woocommerce-message,
+	.woocommerce .woocommerce-error,
+	.woocommerce .woocommerce-info,
+	.woocommerce form .form-row,
+	.woocommerce #reviews #comments ol.commentlist .description,
+	.woocommerce-cart .cart-collaterals .cart_totals table {
+		-webkit-text-stroke: 0.2px;
+	}
+	
+	.widget .mc4wp-form .message,
+	.widget-subscribe .message {
+		-webkit-text-stroke: 0.1px;
+	}
+	
+	blockquote,
+	.wp-caption-text,
+	.slider-overlay .excerpt {
+		-webkit-text-stroke: 0;
+	}
+}
+
+// Typekit fixes
+.wf-loading {
+	h1, h2, h3, h4, h5, h6,
+	p, 
+	a, 
+	label, 
+	.search-field {
+		visibility: hidden;
+		transition: none !important;
+	}
+}

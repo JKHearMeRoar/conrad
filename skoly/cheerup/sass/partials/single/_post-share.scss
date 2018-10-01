@@ -1,0 +1,299 @@
+/**
+ * Single Post Sharing 
+ */
+.post-share-icons {
+	
+	a {
+		float: left;
+		margin-left: 4px;
+		border: 1px solid #ebebeb;
+		border-radius: 50%;
+		box-sizing: border-box;
+		width: 30px;
+		height: 30px;
+		
+		color: #535353;
+		font-size: 13px;
+		line-height: 29px;
+		text-align: center;
+		
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	
+	i {
+		line-height: inherit;
+	}
+	
+	// Google+ icon will not center horizontally
+	.fa-google-plus {
+		padding-left: 2px;
+	}
+	
+	a:hover {
+		color: $main-color;
+	}
+	
+	.likes-count {
+		padding: 0 16px;
+		width: auto;
+		border-radius: 15px;
+		text-align: center;
+		line-height: 30px;
+		color: $main-color;
+	}
+	
+	.fa-heart-o:before {
+		content: "\f004";
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 1px;
+	}
+	
+	.voted {
+		color: #535353;
+	}
+	
+	.likes-count:after {
+		display: none;
+	}
+	
+	.likes-count .number {
+		font-weight: 600;
+		font-size: 12px;
+	}
+}
+
+
+// Alternate Post Share
+.post-share-b {
+	margin-bottom: 30px;
+	
+	.service {
+		float: left;
+		width: 240px;
+		margin-right: 6px;
+		margin-bottom: 6px;
+		border-radius: 2px;
+		color: #fff;
+		font-family: $title-font;
+		line-height: 40px;
+		text-align: center;
+		will-change: opacity;
+	
+		@include breakpoint(medium) {
+			width: 180px;
+		}
+		
+		@include breakpoint(x-small) {
+			width: 45px;
+		}
+	
+		&:hover {
+			filter: brightness(110%);
+		}	
+		
+		i {
+			margin-right: 11px;
+			font-size: 18px;
+			line-height: inherit;
+			vertical-align: middle;
+			
+			@include breakpoint(x-small) {
+				margin: 0;
+			}
+		}
+	}
+	
+	.label {
+		font-size: 14px;
+		
+		@include breakpoint(x-small) {
+			display: none;
+		}
+	}
+	
+	.service:nth-child(n+3) {
+		display: none;
+		width: 50px;
+		
+		@include breakpoint(medium) {
+			width: 45px;
+		}
+		
+		i {
+			margin: 0;
+		}
+		
+		.label {
+			display: none;
+		}
+	}
+	
+	
+	&.all {
+		.service {
+			display: block;
+		}
+	
+		.show-more {
+			display: none;
+		}
+	}
+	
+	.show-more {
+		float: left;
+		width: 40px;
+		line-height: 40px;
+		text-align: center;
+		border-radius: 2px;
+		background: #aaa;
+		color: #fff;
+		font-size: 16px;
+	}
+	
+	// Services
+	.facebook {
+		background: #3059b0;
+	}
+	
+	.twitter {
+		 background: #55acef; 
+	}
+	
+	.gplus {
+		background: #e6422e;
+	}
+	
+	.pinterest {
+		background: #ca2128; 
+	}
+	
+	.linkedin {
+		background: #02669a;
+	}
+	
+	.tumblr {
+		background: #44546b;
+	}
+	
+	.email {
+		background: #19232d;
+	}
+}
+
+// Floating Social Share
+.post-share-float {
+	position: absolute;
+	margin-left: -120px;
+	margin-top: 5px;
+	height: 100%;
+	
+	@include breakpoint(1500px) {
+		margin-left: -90px;
+	}
+	
+	@include breakpoint(small) {
+		position: static !important;
+		display: flex;
+		margin-left: 0;
+		margin-top: -10px;
+		margin-bottom: 30px;
+		padding-left: 1px;
+		height: auto !important;
+		
+		.theiaStickySidebar {
+			display: flex;		
+		}
+	}
+	
+	.services {
+		background: #fff;
+		//transition: transform 0.25s ease-in;
+		
+		@include breakpoint(small) {
+			display: flex;
+		}
+	}
+	
+	.service {
+		margin-top: -1px;
+		display: block;
+		width: 52px;
+		height: 52px;
+		border: 1px solid #ebebeb;
+		color: #000;
+		font-size: 17px;
+		line-height: 54px;
+		text-align: center;
+		
+		@include breakpoint(small) {
+			margin-left: -1px;
+			width: 60px;
+			height: 40px;
+			line-height: 40px;
+		}
+		
+		&:hover {
+			background: #fafafa;
+		}
+	}
+	
+	.fa {
+		-webkit-font-smoothing: initial;
+	}
+	
+	.label {
+		display: none;
+	}
+	
+	// Services
+	.facebook {
+		color: #135cb6;
+	}
+	
+	.twitter {
+		 color: #089fc5; 
+	}
+	
+	.gplus {
+		color: #e6422e;
+	}
+	
+	.pinterest {
+		color: #ca2128; 
+	}
+	
+	.linkedin {
+		color: #02669a;
+	}
+	
+	.tumblr {
+		color: #44546b;
+	}
+	
+	.sticky-top {
+		.services {
+			transform: translate3d(0, 50px, 0);
+		}
+	}
+}
+
+.has-share-float {
+	@include breakpoint(1500px) {
+		margin-left: 30px;
+	}
+	
+	@include breakpoint(1350px) {
+		margin-left: 90px;
+	}
+	
+	@include breakpoint(medium) {
+		margin-left: 30px;	
+	}
+	
+	@include breakpoint(small) {
+		margin-left: 0;
+	}
+}

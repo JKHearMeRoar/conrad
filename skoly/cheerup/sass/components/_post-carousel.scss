@@ -1,0 +1,261 @@
+/**
+ * Posts Carousel 
+ */
+
+.posts-carousel {
+	position: relative;
+	text-align: center;
+	max-width: 100%;
+
+	&.has-sep {
+		padding-bottom: 60px;
+		border-bottom: 1px solid #ebebeb;
+
+		@include breakpoint(x-small) {
+			padding-bottom: 45px;
+		}
+	}
+
+	// Wrapper for the carousel for navigation
+	.the-carousel {
+		position: relative;
+	}
+	
+	.block-heading {
+		margin-bottom: 60px;
+	}
+	
+	.posts {
+		margin-top: -3px;
+		overflow: hidden;
+		z-index: 1;
+		max-height: 270px;
+	}
+	
+	.slick-list {
+		margin-right: -30px;
+	}
+	
+	.post {
+		opacity: 0;
+		float: left;
+		margin-right: 30px;
+	}
+	
+	.loaded {
+		max-height: none;
+		
+		.post {
+			opacity: 1;
+		}
+	}
+	
+	.post-link {
+		display: block;
+		margin-bottom: 22px;
+	}
+	
+	.post-link img {
+		display: inline-block;
+	}
+	
+	.slick-initialized img {
+		display: block;
+		
+		@include breakpoint(x-small) {
+			width: 100%;
+			max-width: initial;
+		}
+	}
+	
+	.post-meta {
+		font-size: 9px;
+	}
+	
+	.post-title {
+		margin-top: 8px;
+		margin-bottom: 8px;
+		font-size: 17px;
+	}
+	
+	.heading a:hover {
+		opacity: 0.7;
+	}
+
+	//
+	// Carousel Navigation
+	// ---
+	
+	.prev-post,
+	.next-post {
+		position: absolute;
+		top: 61px;
+		left: 15px;
+		margin-top: -14px;
+		font-size: 26px;
+		line-height: 1;
+		color: #b4b4b4;
+		cursor: pointer;
+	}
+
+	.next-post {
+		left: auto;
+		right: 15px;
+	}
+
+	.navigate {
+		visibility: hidden;
+		opacity: 0;
+		padding: 0 15px;
+		
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: -62px;
+		right: -62px;
+	
+		transition: all .3s ease-in-out;
+		
+		@include breakpoint(large) {
+			display: none;
+		}
+	}
+	
+	.the-carousel:hover .navigate {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+
+/**
+ * Posts Carousel - Style B
+ */
+.posts-carousel-b {
+	// Account for elements placed outside the box
+	padding-top: 10px;
+	padding-bottom: 25px;
+	
+	.the-carousel {
+		position: relative;
+		border: 1px solid #efefef;
+		padding: 30px;
+		text-align: center;
+	}
+	
+	.block-heading {
+		margin-top: -40px;
+		margin-bottom: 55px;
+		
+		&:before,
+		&:after {
+			display: none;
+		}
+		
+		.title {
+			font-weight: 700;
+			
+			&:before,
+			&:after {
+				display: none;
+			}
+		}
+	}
+	
+	.posts {
+		display: flex;
+		overflow: hidden;
+		z-index: 1;
+	}
+	
+	.slick-list {
+		margin-right: -30px;
+	}
+	
+	.post {
+		opacity: 0;
+		float: left;
+		margin-right: 30px;
+	}
+	
+	.loaded { 
+		.post {
+			opacity: 1;
+		}
+	}
+	
+	.post-link {
+		display: block;
+		margin-bottom: 23px;
+	}
+	
+	.post-link img {
+		display: inline-block;
+	}
+	
+	.slick-initialized img {
+		display: block;
+		
+		@include breakpoint(x-small) {
+			width: 100%;
+			max-width: initial;
+		}
+	}
+	
+	.post-meta {
+		margin: 0 auto;
+		margin-bottom: 23px;
+		max-width: 80%;
+		
+		.below {
+			display: none;
+		}
+	}
+	
+	.post-title {
+		margin-top: 20px;
+		margin-bottom: 15px;
+		font-size: 16px;
+	}
+	
+	// Navigation
+	.navigate {
+		position: relative;
+		transform: translateY(50%);
+	    margin-bottom: -30px;
+	    margin-top: 0;
+	    z-index: 100;
+	}
+	
+	.slick-arrow {
+		display: inline-block;
+		margin-right: 1px;
+		height: 33px;
+		width: 33px;
+		border: 1px solid #e2e2e2;
+		border-radius: 50%;
+		box-sizing: border-box;
+		background: #fff;
+		font-size: 17px;
+		line-height: 31px;
+		
+		// Cursor gets bugged
+		cursor: pointer;
+		
+		.fa {
+			-webkit-font-smoothing: initial;
+		}
+		
+		&:hover {
+			border-color: #d8d8d8;
+		}
+	}
+	
+	.next-post .fa {
+		margin-left: 2px;
+	}
+	
+	.prev-post .fa {
+		margin-right: 2px;
+	}
+}

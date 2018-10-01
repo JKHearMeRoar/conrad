@@ -1,0 +1,48 @@
+/**
+ * Block: News Grid
+ */
+ 
+.news-block {
+	
+	.grid-post {
+		margin-bottom: 0;
+		
+		img {
+			@include breakpoint(medium) {
+				width: 100%;
+			}
+		}
+	}
+	
+	.posts-list {
+		margin-bottom: -20px;
+		
+		@include breakpoint(medium) {
+			margin-top: 30px;
+		}
+	}
+ 
+	.small-post {
+		
+		@include breakpoint(medium) {
+			float: left;
+			width: 50%;
+		}
+	
+		img {
+			display: block;
+			width: 100%;
+			float: none;
+			margin: 0;
+			margin-bottom: 10px;
+			
+			@include breakpoint(large, medium) {
+				max-width: 100%;
+			}
+		}
+	}
+	
+	.small-post:nth-child(2n+1) {
+		clear: both;
+	}
+}

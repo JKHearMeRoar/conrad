@@ -1,0 +1,507 @@
+/**
+ * Skin: Trendy
+ */
+
+// Note: Trendy skin uses selector override method on top of base CSS styling from style.scss
+
+// Import essentials
+@import 'abstracts/_variables'; 
+@import 'abstracts/_utils';
+
+// Variables for this skin
+$skin-font: Lato, Arial, sans-serif;
+$skin-text-font: Lora, Georgia, serif;
+$skin-color: #cea525;
+$special-title-font: "TexGyreAdventor", Futura, Arial, sans-serif; 
+
+// Font
+@font-face {
+	font-family: 'TexGyreAdventor';
+	src: url('fonts/tex-gyre/texgyreadventor-bold-webfont-webfont.woff2') format('woff2'),
+         url('fonts/tex-gyre/texgyreadventor-bold-webfont-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+// Mixin
+@mixin special-title {
+	font-family: $special-title-font;
+	font-weight: 600;
+	color: #161616;
+}
+
+@mixin bold-title {
+	font-weight: 900;
+	letter-spacing: 0.1em;
+}
+
+// Base overrides
+@import 'skins/trendy-base';
+
+
+/* Navigation Adjustments */
+.navigation {
+	letter-spacing: 0.1em;
+	font-weight: 900;
+	
+	.menu > li li a,
+	.mega-menu .sub-cats a {
+		font-size: 11px;
+		font-weight: 700;
+		letter-spacing: 0.07em;
+	}
+	
+	.mega-menu .recent-posts .post-title {
+		font-family: $skin-font;
+		font-size: 15px;
+		font-weight: 700;
+		letter-spacing: 0;
+	}
+}
+
+.navigation.dark {
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Adjust text color */
+.text,
+.post-content,
+.textwidget,
+.widget-cta .label,
+.widget_categories a,
+.widget .product-categories a,
+.widget_archive a {
+	color: #535353; 
+}
+
+/**
+ * General components and global changes
+ */
+
+h1, h2, h3, h4, h5, h6 {
+	color: #535353;
+}
+
+.section-head {
+	.title {
+		@include bold-title;
+		font-size: 11px;
+	}
+}
+ 
+.post-meta {
+	time {
+		font-weight: 700;
+		letter-spacing: 0.05em;
+	}
+	
+	.post-cat > a {
+		font-weight: 900;
+		letter-spacing: 0.1em;
+	}
+	
+	.meta-sep:before {
+		padding: 0 5px;
+	}
+}
+
+.post-title,
+.post-title-alt {
+	@include special-title;
+	letter-spacing: 0;
+	
+	a {
+		color: #161616;
+	}
+}
+
+.post-title-alt {
+	margin-top: 12px;
+	margin-bottom: 16px;
+	font-size: 23px;
+	
+	&:after {
+		display: none;
+	}
+}
+
+.posts-carousel .post-title {
+	font-size: 18px;
+}
+
+.main-pagination {
+	margin-top: 90px;
+	
+	.next a,
+	.previous a {
+		font-weight: 900;
+		letter-spacing: 0.15em;
+	}
+}
+
+/**
+ * Posts adjustments
+ */
+.grid-post {
+	.post-title-alt {
+		margin-top: 9px;
+		margin-bottom: 15px;
+		font-size: 20px;
+		line-height: 1.5;
+	}
+	
+	.post-thumb {
+		margin-bottom: 0;
+	}
+	
+	.meta-title {
+		position: relative;
+		margin: 0 12px;
+		margin-top: -12px;
+		padding: 0 20px;
+		padding-top: 18px;
+		background: #fff;
+	}
+	
+	.post-meta-b {
+		margin-top: 15px;
+	}
+}
+
+.large-post .featured img {
+	margin-bottom: 23px;
+}
+
+.post-footer {
+	margin-top: 45px;
+	
+	.read-more {
+		font-size: 11px;
+		font-weight: 900;
+		letter-spacing: 0.1em;
+	}
+}
+
+.overlay-post {
+	.post-cat a {
+		color: #161616;
+	}
+	
+	.post-title {
+		margin-top: 12px;
+		margin-bottom: 12px;
+	}
+}
+
+/**
+ * Single Post changes 
+ */
+
+.single-cover .overlay .post-by {
+	font-weight: 600;
+	letter-spacing: 0.05em;
+}
+
+.post-content {
+	line-height: 1.857;
+	
+	h1, h2, h3, h4, h5, h6 {
+		@include special-title;
+	}
+}
+
+.tag-share  {
+	.post-tags a {
+		@include bold-title; 
+	}
+}
+
+.author-box {
+	
+	.author > span {
+		@include bold-title;
+	}
+	
+	.author > a {
+		@include special-title;
+		font-size: 22px;
+	}
+	
+	.text {
+		font-size: 13px;
+	}
+}
+
+.related-posts {
+	.post-title {
+		padding: 0 10px;
+		font-family: $skin-font;
+		font-size: 15px;
+		font-weight: 700;
+		letter-spacing: 0;
+		
+		a {
+			color: #535353;
+		}
+	}
+}
+
+.comments-list { 
+	.comment-author {
+		color: #535353;
+		margin-bottom: 0;
+	}
+	
+	.comment-text {
+		font-size: 13px;
+	}
+	
+	.comment-time {
+		font-weight: 700;
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+
+/**
+ * Home changes
+ */
+.block-heading .title {
+	font-size: 16px;
+}
+
+.trendy-slider {
+	
+	.post-cat a {
+		color: #161616;
+	}
+	
+	.item {	
+		&:before {
+			content: "";
+			position: absolute;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			background: rgba(#000, 0.2);
+			pointer-events: none;
+			transform: translate3d(0,0,0);
+			transition: opacity 0.3s ease-in;
+		}
+		
+		&:hover:before {
+			opacity: 0.4;
+		}
+		
+		&:hover img {
+			filter: none;
+		}
+	}
+	
+	.overlay {
+		width: 500px;
+		max-width: calc(100% - 200px);
+		background: rgba(#000, 0.15);
+		border: 1px solid rgba(#fff, 0.25);
+	}
+	
+	.post-title {
+		a, 
+		a:hover {
+			color: #fff;
+		}
+	}
+	
+	time {
+		color: #fff;
+	}
+}
+
+.beauty-slider {
+	
+	.overlay {
+		width: 350px;
+		margin-left: -175px;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	
+	.post-title {
+		font-size: 20px;
+	}
+}
+
+.large-slider { 
+	.heading {
+		@include special-title;
+	}
+}
+
+// Grid slider
+.grid-slider {
+	.heading {
+		@include special-title;
+		-webkit-font-smoothing: antialiased;
+	}
+	
+	.category {
+		font-size: 11px;
+	}
+}
+
+.grid-b-slider {
+	.heading {
+		@include special-title;
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+.carousel-slider {
+	.heading {
+		@include special-title;
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+// Bold Slider
+.bold-slider {
+	.heading {
+		@include special-title;
+		-webkit-font-smoothing: antialiased;	
+	}
+}
+
+// Default / Stylish slider
+.slider-overlay {
+	.heading {
+		@include special-title;
+		letter-spacing: 0;
+	}
+	
+	.excerpt {
+		font-size: 15px;
+		letter-spacing: 0;
+	}
+}
+
+
+/**
+ * Sidebar adjustments
+ */
+.sidebar {
+	
+	.widget {
+		border: 1px solid #ebebeb;
+		padding: 30px;
+	}
+	
+	.widget-title {
+		@include bold-title;
+		margin: 0 -31px;
+		margin-top: -31px;
+		margin-bottom: 35px;
+		border-color: transparent;
+		background: #161616;
+		color: #fff;
+		font-size: 11px;
+		-webkit-font-smoothing: antialiased;
+	}
+	
+	// Ad widget
+	.widget-a-wrap {
+		border: 0;
+		
+		.the-wrap {
+			margin: 0 -30px;
+		}
+	}
+	
+	.widget_mc4wp_form_widget,
+	.widget-subscribe {
+		background: #f7f7f7;
+		
+		.widget-title {
+			margin: 0;
+			margin-bottom: 35px;
+			background: transparent;
+			color: #535353;
+		}
+	}
+}
+
+.widget-about {
+	.about-text { 
+		font-size: 13px;
+	}
+	
+	.more {
+		@include bold-title;
+	}
+}
+
+.widget-cta {
+	.label {
+		@include bold-title;
+	}
+}
+
+.widget-posts {
+	.post-title {
+		font-family: $skin-font;
+		font-size: 15px;
+		line-height: 1.5;
+		-webkit-font-smoothing: antialiased;
+	}
+	
+	.post-meta {
+		font-size: 10px;
+	}
+}
+
+
+// Spacing and font-size changes for archive widgets
+ 
+.widget_categories,
+.widget .product-categories,
+.widget_archive {
+	
+	li {
+		padding: 10px 0;
+		
+		&:only-child {
+			padding-bottom: 0;
+		}
+	}
+	
+	a {
+		font-size: 13px;
+		
+		&:before {
+			margin-top: 8px;
+		}
+	}
+}
+
+/**
+ * Footer Changes 
+ */
+
+.upper-footer .widget-title {
+	color: #535353;
+	font-weight: 700;
+}
+
+.contrast .lower-footer {
+	.copyright {
+		@include bold-title;
+		font-size: 11px;
+		font-family: $skin-font;
+		text-transform: uppercase;
+		-webkit-font-smoothing: antialiased;
+	}
+	
+	.social-icons {
+		line-height: 1.5;
+	}
+}

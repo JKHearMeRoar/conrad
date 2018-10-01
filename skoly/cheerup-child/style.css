@@ -1,0 +1,228 @@
+/*
+Theme Name: CheerUp Child
+Theme URI: http://theme-sphere.com/
+Description: A child theme of CheerUp
+Author: ThemeSphere
+Author URI: http://theme-sphere.com
+Template: cheerup
+Version: 1.1
+*/
+
+.post-thumb .format-video > .fa {
+	margin-top: 7px;
+}
+
+.the-post .author-box .image img {
+	background-color: #fff;
+	/*border-radius: 0; */
+}
+
+.post-share-float .pinterest {
+	display: none;
+}
+
+.post-share-icons > a:nth-child(4),
+.post-share-icons > a:nth-child(5) {
+	display: none;
+}
+
+#search-2 h5 {
+	display: none;
+}
+
+#search-2 input {
+	border-top-color: #0099cc;
+	font-size: 15px;
+}
+
+#search-2 .widget_search button {
+	margin-top: -41px;
+}
+
+.min180 {
+	min-height: 180px;
+}
+
+.post-content .ccheck ul,
+.post-content .ccheck ol,
+.page-content .ccheck ul,
+.page-content .ccheck ol {
+	margin-left: 0px;
+}
+
+.post-content .ccheck ul li,
+.page-content .ccheck ul li {
+	display: block;
+    padding-left: 30px;
+    background: url(img/check.png) 0 6px no-repeat;
+}
+
+.main .post-content h1, 
+.main .post-content h2, 
+.main .post-content h3, 
+.main .post-content h4, 
+.main .post-content h5, 
+.main .post-content h6 {
+	margin-top: 1.0em;
+    margin-bottom: 0.8em;
+}
+
+.slick-slider .slider-overlay .read-more {
+	margin-top: -15px;
+}
+
+.large-slider .heading {
+    background: #0098dd;
+    padding: 0.3em;
+    opacity: 0.9;
+	-webkit-box-shadow: 5px 5px 5px 0px rgba(66,66,66,0.55);
+-moz-box-shadow: 5px 5px 5px 0px rgba(66,66,66,0.55);
+box-shadow: 5px 5px 5px 0px rgba(66,66,66,0.55);
+}
+
+.large-slider .read-more {
+    background: #fbfbfb;
+    border: 1px solid #fbfbfb;
+    color: #000000;
+}
+
+.large-slider .read-more:hover {
+    background: #0098dd;
+    color: #fff;
+}
+
+.main-head.nav-below .title {
+    padding: 35px 0;
+}
+
+.main {
+    margin-top: 50px;
+}
+
+.vc_column_container>.vc_column-inner {
+    margin-bottom: 30px;
+}
+
+.list-post-b .post-title {
+	max-width: 100%;
+}
+
+#breadcrumbs{
+    list-style:none;
+    margin-top: 10px;
+    overflow:hidden;
+}
+  
+#breadcrumbs li {
+    display: inline-block;
+    font-weight: 700;
+    margin-top: 10px;
+    line-height: 14px;
+    /*display:inline-block;
+    vertical-align:middle;
+    margin-right:10px;*/
+}
+
+#breadcrumbs a,
+#breadcrumbs .item-current strong {
+	font-weight: 400;
+    text-decoration: none;
+    height: 30px;
+    display: inline-block;
+    line-height: 30px;
+    font-size: 13px;
+    color: #616161;
+    border: 1px solid #616161;
+    padding: 0 11px;
+}
+  
+#breadcrumbs .separator{
+    /*font-size:14px;
+    font-weight:100;
+    color:#ccc;*/
+    background-image: url(data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.…49.628%20249.627%2064.124%2064.124%20313.752-313.751z%22%2F%3E%3C%2Fsvg%3E);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+    content: '';
+    display: inline-block;
+    height: 10px;
+    width: 6px;
+    margin: 0 10px;
+}
+
+#breadcrumbs a:hover,
+#breadcrumbs .item-current strong {
+	color: #0098dd;
+	border-color: #0098dd;
+}
+
+.navigation.below .menu {
+	text-align: left;
+}
+
+.vc-hoverbox-inner {
+	min-height: 321px !important;
+}
+
+.vc-hoverbox-inner .vc_btn3-container.vc_btn3-center {
+	position: absolute;
+    left: 0px;
+    bottom: 20px;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.vc-hoverbox-inner .vc_btn3-container.vc_btn3-center .vc_btn3-block.vc_btn3-size-md {
+	height: 49px;
+}
+
+.vc-hoverbox-block.vc-hoverbox-front {
+    background-position: bottom;
+}
+
+.vc-hoverbox-block.vc-hoverbox-back {
+    justify-content: flex-start;
+}
+
+.vc_general.vc_btn3 .vc_btn3-icon {
+	vertical-align: initial;
+}
+
+.main.wrap .post-title-alt, .main.wrap .post-title-alt a {
+    color: #0098dd !important;
+}
+
+.the-post .the-post-header {
+    text-align: left;
+}
+
+.post-title-alt:after, .block-head-b .title {
+    display: none;
+}
+
+.the-post-meta {
+    text-align: center;
+}
+
+.bluebox .vc_column_container .vc_column-inner {
+    border-radius: 10px;
+    border: 3px solid #0098dd;
+    background: #0098dd;
+}
+
+.bluebox .vc_column_container .vc_column-inner .wpb_single_image {
+    background: #fff;
+    padding-bottom: 45px !important;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.bluebox .vc_column_container .vc_column-inner .wpb_text_column {
+    color: #ffffff;
+    margin-bottom: 10px;
+    min-height: 60px;
+}
+

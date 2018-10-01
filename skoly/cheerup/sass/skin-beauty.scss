@@ -1,0 +1,320 @@
+/**
+ * Skin: Beauty
+ */
+
+// Note: Beauty skin uses selector override method on top of base CSS styling from style.scss
+
+// Import essentials
+@import 'abstracts/_variables'; 
+@import 'abstracts/_utils';
+
+// Variables for this skin
+$skin-font: Lato, Arial, sans-serif;
+$skin-color: #f6b2ca;
+$special-title-font: "LibreBodoni", Didot, Garamond, serif; 
+
+// Font
+@font-face {
+	font-family: 'LibreBodoni';
+	src: url('fonts/libre-bodoni/librebodoni-regular-webfont.woff2') format('woff2'),
+         url('fonts/libre-bodoni/librebodoni-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// Mixin
+@mixin special-title {
+	font-family: $special-title-font;
+	font-weight: 400;
+	color: #161616;
+}
+
+@mixin bold-title {
+	font-weight: 900;
+	letter-spacing: 0.1em;
+}
+
+// Base overrides
+@import 'skins/beauty-base';
+
+
+/* Navigation Adjustments */
+.navigation {
+	color: #535353;
+	letter-spacing: 0.1em;
+	font-weight: 900;
+	
+	.menu > li li a,
+	.mega-menu .sub-cats a {
+		font-size: 11px;
+		font-weight: 700;
+		letter-spacing: 0.07em;
+	}
+	
+	.mega-menu .recent-posts .post-title {
+		font-family: $skin-font;
+		font-size: 15px;
+		font-weight: 700;
+		letter-spacing: 0;
+	}
+}
+
+
+/**
+ * General components and global changes
+ */
+
+h1, h2, h3, h4, h5, h6 {
+	color: #535353;
+}
+
+a {
+	color: #535353;
+}
+
+.section-head {
+	.title {
+		@include bold-title;
+		font-size: 11px;
+	}
+}
+ 
+.post-meta {
+	time {
+		font-weight: 700;
+		letter-spacing: 0.05em;
+	}
+	
+	.post-cat > a {
+		font-weight: 900;
+		letter-spacing: 0.1em;
+	}
+	
+	.meta-sep:before {
+		padding: 0 5px;
+	}
+}
+
+.post-title,
+.post-title-alt {
+	@include special-title;
+	letter-spacing: 0;
+	
+	a {
+		color: #161616;
+	}
+}
+
+.post-title-alt {
+	margin-top: 12px;
+	margin-bottom: 16px;
+	font-size: 26px;
+	
+	&:after {
+		display: none;
+	}
+}
+
+.posts-carousel .post-title {
+	font-size: 18px;
+}
+
+.main-pagination {
+	.next a,
+	.previous a {
+		font-weight: 900;
+		letter-spacing: 0.15em;
+	}
+}
+
+/**
+ * Posts adjustments
+ */
+.grid-post {
+	.post-title-alt {
+		margin-bottom: 14px;
+	}
+}
+
+.large-post .featured img {
+	margin-bottom: 23px;
+}
+
+.post-footer {
+	margin-top: 45px;
+	
+	.read-more {
+		font-size: 11px;
+		font-weight: 900;
+		letter-spacing: 0.1em;
+	}
+}
+
+/* Single Post */
+
+.single-cover .overlay .post-by {
+	font-weight: 600;
+	letter-spacing: 0.05em;
+}
+
+.post-content {
+	line-height: 1.857;
+	
+	h1, h2, h3, h4, h5, h6 {
+		@include special-title;
+	}
+}
+
+.tag-share {
+	.post-tags a {
+		font-weight: 900;
+		letter-spacing: 0.1em;
+	}
+}
+
+.author-box {
+	.author > span {
+		@include bold-title;
+	}
+	
+	.author > a {
+		@include special-title;
+		font-size: 22px;
+	}
+}
+
+.related-posts {
+	.post-title {
+		font-family: $skin-font;
+		font-size: 15px;
+		font-weight: 700;
+		letter-spacing: 0;
+		
+		a {
+			color: #535353;
+		}
+	}
+}
+
+.comments-list { 
+	.comment-author {
+		color: #535353;
+		margin-bottom: 0;
+	}
+	
+	.comment-text {
+		font-size: 13px;
+	}
+	
+	.comment-time {
+		font-weight: 700;
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+
+/**
+ * Home changes
+ */
+.block-heading .title {
+	font-size: 16px;
+}
+
+.large-slider { 
+	.heading {
+		@include special-title;
+	}
+}
+
+// Default / Stylish slider
+.stylish-slider {
+	.heading {
+		@include special-title;
+	}
+	
+	.excerpt {
+		font-size: 15px;
+		letter-spacing: 0;
+	}
+}
+
+
+// Grid slider
+.grid-slider {
+	.heading {
+		@include special-title;
+	}
+}
+
+.grid-b-slider {
+	.heading {
+		@include special-title;
+	}
+}
+
+.carousel-slider {
+	.heading {
+		@include special-title;
+	}
+}
+
+// Bold Slider
+.bold-slider {
+	.heading {
+		@include special-title;
+	}
+}
+
+
+/**
+ * Sidebar adjustments
+ */
+.sidebar {
+	
+	.widget-title {
+		@include bold-title;
+		border-top-color: $skin-color;
+		font-size: 11px;
+	}
+	
+	.widget_mc4wp_form_widget,
+	.widget-subscribe {
+		background: #f7f7f7;
+	}
+}
+
+.widget-about {
+	.about-text { 
+		font-size: 13px;
+	}
+	
+	.more {
+		@include bold-title;
+	}
+}
+
+.widget-cta {
+	.label {
+		@include bold-title;
+	}
+}
+
+.widget-posts {
+	.post-title {
+		color: #535353;
+		font-family: $skin-font;
+		font-size: 15px;
+		font-weight: 700;
+		line-height: 1.45;
+	}
+	
+	.post-meta {
+		//font-size: 10px;
+	}
+}
+
+/* Footer Changes */
+.upper-footer .widget-title {
+	color: #535353;
+	font-weight: 700;
+}

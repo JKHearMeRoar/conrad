@@ -1,0 +1,16 @@
+/**
+ * Visual Composer changes
+ */
+
+.page-content .block.last-block {
+	margin-bottom: 0;
+} 
+
+.vc_column_container > .vc_column-inner {
+	padding: 0 !important;
+}
+
+// To prevent a flash of sidebar width change while JS loads
+.wpb_wrapper > .sidebar {
+	padding-left: 30px;
+}

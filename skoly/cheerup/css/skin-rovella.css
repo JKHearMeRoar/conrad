@@ -1,0 +1,787 @@
+/**
+ * Skin: Rovella 
+ */
+@font-face {
+  font-family: 'Trueno';
+  src: url("fonts/trueno/truenorg-webfont.woff2") format("woff2"), url("fonts/trueno/truenorg-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/**
+ * Change Main Color
+ */
+input[type="submit"],
+button,
+input[type="button"],
+.button,
+.cart-action .cart-link .counter,
+.main-head.compact .posts-ticker .heading,
+.single-cover .overlay .post-cat a,
+.comments-list .bypostauthor .post-author,
+.cat-label a:hover,
+.cat-label.color a,
+.post-thumb:hover .cat-label a,
+.products-block .more-link:hover,
+.beauty-slider .slick-dots .slick-active button,
+.carousel-slider .category,
+.grid-b-slider .category,
+.page-links .current,
+.page-links a:hover,
+.page-links > span,
+.widget-posts .posts.full .counter:before,
+.woocommerce span.onsale,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit,
+.woocommerce a.button.alt,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt,
+.woocommerce input.button.alt:hover,
+.woocommerce #respond input#submit.alt,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce #respond input#submit:hover,
+.woocommerce nav.woocommerce-pagination ul li span.current,
+.woocommerce nav.woocommerce-pagination ul li a:hover,
+.woocommerce .widget_price_filter .price_slider_amount .button {
+  background: #c0a88a;
+}
+
+blockquote:before,
+.main-color,
+.top-bar .social-icons a:hover,
+.navigation .menu > li:hover > a,
+.navigation .menu > .current-menu-item > a,
+.navigation .menu > .current-menu-parent > a,
+.navigation .menu > .current-menu-ancestor > a,
+.navigation li:hover > a:after,
+.navigation .current-menu-item > a:after,
+.navigation .current-menu-parent > a:after,
+.navigation .current-menu-ancestor > a:after,
+.navigation .menu li li:hover > a,
+.navigation .menu li li.current-menu-item > a,
+.tag-share .post-tags a:hover,
+.post-share-icons a:hover,
+.post-share-icons .likes-count,
+.author-box .author > span,
+.comments-area .section-head .number,
+.comments-list .comment-reply-link,
+.main-footer.dark .social-link:hover,
+.lower-footer .social-icons .fa,
+.archive-head .sub-title,
+.social-share a:hover,
+.social-icons a:hover,
+.post-meta .post-cat > a,
+.post-meta-c .post-author > a,
+.large-post-b .post-footer .author a,
+.trendy-slider .post-cat a,
+.main-pagination .next a:hover,
+.main-pagination .previous a:hover,
+.main-pagination.number .current,
+.post-content a,
+.widget-about .more,
+.widget-about .social-icons .social-btn:hover,
+.widget-social .social-link:hover,
+.woocommerce .star-rating:before,
+.woocommerce .star-rating span:before,
+.woocommerce .amount,
+.woocommerce .order-select .drop a:hover,
+.woocommerce .order-select .drop li.active,
+.woocommerce-page .order-select .drop a:hover,
+.woocommerce-page .order-select .drop li.active,
+.woocommerce .widget_price_filter .price_label .from,
+.woocommerce .widget_price_filter .price_label .to,
+.woocommerce div.product div.summary p.price,
+.woocommerce div.product div.summary span.price,
+.woocommerce #content div.product div.summary p.price,
+.woocommerce #content div.product div.summary span.price {
+  color: #c0a88a;
+}
+
+.products-block .more-link:hover,
+.beauty-slider .slick-dots .slick-active button,
+.page-links .current,
+.page-links a:hover,
+.page-links > span,
+.woocommerce nav.woocommerce-pagination ul li span.current,
+.woocommerce nav.woocommerce-pagination ul li a:hover {
+  border-color: #c0a88a;
+}
+
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
+  background-color: #c0a88a;
+}
+
+.post-title-alt:after,
+.block-head-b .title {
+  border-bottom: 1px solid #c0a88a;
+}
+
+.widget_categories a:before,
+.widget_product_categories a:before,
+.widget_archive a:before {
+  border: 1px solid #c0a88a;
+}
+
+/* Change text / contrast font */
+body,
+input,
+textarea,
+select,
+.archive-head .description,
+.text,
+.post-content,
+.textwidget,
+.post-meta .text-in,
+.widget_categories a,
+.widget_product_categories a,
+.widget_archive a,
+.woocommerce .woocommerce-message,
+.woocommerce .woocommerce-error,
+.woocommerce .woocommerce-info,
+.woocommerce form .form-row,
+.woocommerce .woocommerce-noreviews,
+.woocommerce #reviews #comments ol.commentlist .description,
+.woocommerce-cart .cart-empty,
+.woocommerce-cart .cart-collaterals .cart_totals table {
+  font-family: Lato, Arial, sans-serif;
+  letter-spacing: 0;
+  -webkit-font-smoothing: initial;
+}
+
+/* Change main body and heading font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input[type="submit"],
+button,
+input[type="button"],
+.button,
+.modern-quote cite,
+.top-bar-content,
+.search-action .search-field,
+.main-head .title,
+.navigation,
+.tag-share,
+.post-share-b .service,
+.author-box,
+.comments-list .comment-content,
+.post-nav .label,
+.main-footer.dark .back-to-top,
+.lower-footer .social-icons,
+.main-footer .social-strip .social-link,
+.main-footer.bold .links .menu-item,
+.main-footer.bold .copyright,
+.archive-head,
+.cat-label a,
+.section-head,
+.post-title-alt,
+.post-title,
+.block-heading,
+.block-head-b,
+.small-post .post-title,
+.likes-count .number,
+.post-meta,
+.grid-post-b .read-more-btn,
+.list-post-b .read-more-btn,
+.post-footer .read-more,
+.post-footer .social-share,
+.post-footer .social-icons,
+.large-post-b .post-footer .author a,
+.products-block .more-link,
+.main-slider,
+.slider-overlay .heading,
+.large-slider,
+.large-slider .heading,
+.grid-slider .category,
+.grid-slider .heading,
+.carousel-slider .category,
+.carousel-slider .heading,
+.grid-b-slider .heading,
+.bold-slider,
+.bold-slider .heading,
+.main-pagination,
+.main-pagination .load-button,
+.page-links,
+.post-content .read-more,
+.widget-about .more,
+.widget-posts .post-title,
+.widget-posts .posts.full .counter:before,
+.widget-cta .label,
+.social-follow .service-link,
+.widget-twitter .meta .date,
+.widget-twitter .follow,
+.widget_categories,
+.widget_product_categories,
+.widget_archive,
+.mobile-menu,
+.woocommerce .main .button,
+.woocommerce .quantity .qty,
+.woocommerce nav.woocommerce-pagination,
+.woocommerce-cart .post-content,
+.woocommerce .woocommerce-ordering,
+.woocommerce-page .woocommerce-ordering,
+.woocommerce ul.products,
+.woocommerce.widget,
+.woocommerce div.product,
+.woocommerce #content div.product,
+.woocommerce-cart .cart-collaterals .cart_totals .button,
+.woocommerce .checkout .shop_table thead th,
+.woocommerce .checkout .shop_table .amount,
+.woocommerce-checkout #payment #place_order {
+  font-family: Lato, Arial, sans-serif;
+}
+
+/* Adjust text color */
+.mega-menu .recent-posts .post-title,
+.text,
+.post-content,
+.textwidget,
+.post-footer .author a,
+.post-footer .read-more-link,
+.widget-cta .label,
+.tagcloud a,
+.widget_categories a,
+.widget_product_categories a,
+.widget_archive a {
+  color: #161616;
+}
+
+/* Remove uppercase text on several elements */
+.navigation.inline .menu > li li a,
+.navigation.inline .mega-menu .sub-cats a,
+.navigation.simple,
+.author-box .author > a,
+.comments-list .comment-author,
+.post-title-alt,
+.post-title,
+.slider-overlay .heading,
+.large-slider .heading,
+.grid-slider .heading,
+.carousel-slider .heading,
+.grid-b-slider .heading,
+.bold-slider .heading,
+.main-pagination.number,
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6,
+.widget_calendar tfoot a,
+.woocommerce span.onsale,
+.woocommerce .order-select,
+.woocommerce-page .order-select,
+.woocommerce ul.products li.product,
+.woocommerce ul.products .product_type_external,
+.woocommerce ul.products .added_to_cart,
+.woocommerce .widget_price_filter .price_slider_amount,
+.woocommerce ul.cart_list li a,
+.woocommerce ul.product_list_widget li a,
+.woocommerce.widget_shopping_cart .total > strong,
+.woocommerce div.product .product-cat,
+.woocommerce #content div.product .product-cat,
+.woocommerce div.product .product_title,
+.woocommerce #content div.product .product_title,
+.woocommerce div.product .product_meta,
+.woocommerce #content div.product .product_meta,
+.woocommerce div.product .woocommerce-tabs ul.tabs li a,
+.woocommerce #content div.product .woocommerce-tabs ul.tabs li a,
+.woocommerce table.shop_attributes,
+.woocommerce #reviews #comments ol.commentlist li .meta strong,
+.woocommerce #reviews .comment-form-rating,
+.woocommerce-cart table.cart .label,
+.woocommerce-cart table.cart .product-name > a,
+.woocommerce-cart table.cart .product-cat a,
+.woocommerce .checkout .shop_table thead th {
+  text-transform: none;
+}
+
+/**
+ * Header and Nav
+ */
+.top-bar.dark .top-bar-content {
+  background: #000;
+}
+
+.navigation {
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.12em;
+}
+
+.navigation .menu > li:first-child {
+  margin-left: -19px;
+}
+
+.navigation .menu > li > a {
+  padding: 0 19px;
+}
+
+.navigation .menu > li li a,
+.navigation .mega-menu .sub-cats a {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.navigation .mega-menu .recent-posts .post-title {
+  font-family: Lato, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.navigation.dark {
+  background: #000;
+}
+
+.navigation.dark .menu > li > a,
+.navigation.dark .menu > .current-menu-item > a,
+.navigation.dark .menu > .current-menu-parent > a,
+.navigation.dark .menu > .current-menu-ancestor > a {
+  color: #fff;
+}
+
+.navigation.dark .menu li:hover > a,
+.navigation.dark .menu li li:hover > a,
+.navigation.dark .menu li:hover > a:after {
+  color: #c0a88a;
+}
+
+.navigation.dark .menu > li li a {
+  border-color: rgba(187, 187, 187, 0.15);
+}
+
+.mobile-menu li a {
+  letter-spacing: 0.12em;
+}
+
+/**
+ * General components and global changes
+ */
+::-moz-selection {
+  background: rgba(192, 168, 138, 0.2);
+}
+::selection {
+  background: rgba(192, 168, 138, 0.2);
+}
+
+::-moz-selection {
+  background: rgba(192, 168, 138, 0.2);
+}
+
+input[type="submit"],
+button, input[type="button"],
+.button {
+  letter-spacing: 0.12em;
+}
+
+blockquote {
+  font-family: Lora, Georgia, serif;
+  font-size: 17px;
+  color: #989898;
+}
+
+.section-head .title {
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: #161616;
+}
+
+.post-meta .post-cat > a {
+  font-weight: 600;
+  letter-spacing: 0.15em;
+}
+
+.post-meta .post-cat > span {
+  display: none;
+}
+
+.post-meta time {
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+.post-meta-b {
+  margin-bottom: 30px;
+}
+
+.post-meta-b .date-link,
+.post-meta-b .comments {
+  color: #505050;
+}
+
+.post-meta-b .post-title-alt {
+  margin: 16px 0;
+}
+
+.post-title,
+.post-title-alt {
+  font-family: Trueno, Arial, sans-serif;
+  font-weight: 400;
+  color: #161616;
+  letter-spacing: -0.01em;
+}
+
+.post-title a,
+.post-title-alt a {
+  color: #000;
+}
+
+.post-title-alt {
+  margin-top: 13px;
+  margin-bottom: 16px;
+  font-size: 34px;
+}
+
+@media (max-width: 480px) {
+  .post-title-alt {
+    font-size: 24px;
+  }
+}
+
+.post-title-alt:after {
+  display: none;
+}
+
+.text,
+.post-content,
+.textwidget {
+  font-family: "Noto Sans", Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.main-pagination .next a,
+.main-pagination .previous a {
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+/**
+ * Posts adjustments
+ */
+.large-post .featured img {
+  margin-bottom: 30px;
+}
+
+.large-post .author {
+  letter-spacing: 0;
+}
+
+.large-post-b .read-more a {
+  padding: 13px 19px;
+  border: 2px solid #161616;
+  color: #161616;
+  background: transparent;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  -webkit-font-smoothing: initial;
+}
+
+.large-post-b .read-more a:hover {
+  background: #000;
+  color: #fff;
+}
+
+.large-post-b .read-more a:before {
+  display: none;
+}
+
+.large-post-b .read-more a span {
+  padding: 0;
+  background: transparent;
+}
+
+.large-post-b .post-footer {
+  letter-spacing: 0;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.large-post-b .post-footer .author a {
+  letter-spacing: 0.15em;
+}
+
+.large-post-b .post-footer .number {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.large-post-b .post-footer .social-icons a {
+  font-size: 14px;
+}
+
+.list-post .post-excerpt {
+  font-size: 13px;
+}
+
+.post-footer {
+  margin-top: 45px;
+}
+
+.post-footer .read-more {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.post-content .read-more {
+  font-family: "Noto Sans", Arial, sans-serif;
+}
+
+.list-post-b .post-meta {
+  color: #505050;
+}
+
+.list-post-b .read-more-btn {
+  padding: 13px 19px;
+  border: 2px solid #161616;
+  color: #161616;
+  background: transparent;
+}
+
+.grid-post-b .read-more-btn {
+  padding: 13px 19px;
+  border: 2px solid #161616;
+  color: #161616;
+  background: transparent;
+  font-weight: 400;
+}
+
+/* Single Post */
+.single-cover .overlay .post-by {
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.post-content {
+  font-size: 14px;
+}
+
+.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tag-share .post-tags a {
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.post-share-icons a {
+  color: #161616;
+}
+
+.author-box .author > a {
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  font-size: 22px;
+}
+
+.author-box .author-bio {
+  font-size: 13px;
+}
+
+.related-posts .post-title {
+  font-family: Lato, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.related-posts .post-meta {
+  font-size: 10px;
+}
+
+/**
+ * Home & Archives changes
+ */
+.block-heading .title {
+  font-size: 15px;
+}
+
+.posts-carousel .title {
+  background: transparent;
+}
+
+.posts-carousel .title:before,
+.posts-carousel .title:after {
+  display: none;
+}
+
+.posts-carousel .block-heading {
+  margin-top: -5px;
+  margin-bottom: 62px;
+}
+
+.posts-carousel .block-heading:before {
+  display: none;
+}
+
+.posts-carousel .block-heading:after {
+  top: 100%;
+  left: 50%;
+  margin-top: 12px;
+  margin-left: -18px;
+  width: 36px;
+  height: 2px;
+  background: #000;
+}
+
+.posts-carousel .post-link {
+  margin-bottom: 18px;
+}
+
+.posts-carousel .post-title {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.posts-carousel time {
+  display: none;
+}
+
+.slider-overlay .heading {
+  font-family: Trueno, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.slider-overlay .excerpt {
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.large-slider .heading {
+  font-family: Trueno, Arial, sans-serif;
+  font-weight: 400;
+  color: #161616;
+  -webkit-font-smoothing: antialiased;
+}
+
+.grid-slider .heading {
+  font-family: Trueno, Arial, sans-serif;
+  font-weight: 400;
+  color: #161616;
+  -webkit-font-smoothing: antialiased;
+}
+
+.grid-slider .category {
+  font-size: 11px;
+}
+
+.grid-b-slider .heading {
+  font-family: Trueno, Arial, sans-serif;
+  font-weight: 400;
+  color: #161616;
+  -webkit-font-smoothing: antialiased;
+}
+
+.carousel-slider .heading {
+  font-family: Trueno, Arial, sans-serif;
+  font-weight: 400;
+  color: #161616;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bold-slider .heading {
+  font-family: Trueno, Arial, sans-serif;
+  font-weight: 400;
+  color: #161616;
+  -webkit-font-smoothing: antialiased;
+}
+
+/**
+ * Sidebar adjustments
+ */
+.sidebar .widget-title {
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #fff;
+  background: #000;
+}
+
+.sidebar .widget_mc4wp_form_widget,
+.sidebar .widget-subscribe {
+  background: #f7f7f7;
+}
+
+.sidebar .widget_mc4wp_form_widget .widget-title,
+.sidebar .widget-subscribe .widget-title {
+  background: transparent;
+  color: #161616;
+  line-height: 1;
+}
+
+.widget .mc4wp-form .message,
+.widget-subscribe .message {
+  font-family: "Noto Sans", Arial, sans-serif;
+}
+
+.widget-cta .label {
+  font-weight: 600;
+  font-size: 11px;
+  color: #161616;
+  padding: 9px 14px;
+  letter-spacing: 0.15em;
+}
+
+.widget-posts .post-title {
+  font-family: Lato, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.52;
+  letter-spacing: 0;
+}
+
+.widget-posts .posts.large .post-title {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.widget-posts .posts.large time {
+  letter-spacing: 0.07em;
+}
+
+/* Footer Changes */
+.upper-footer .widget-title {
+  color: #222;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.upper-footer .widget-posts .post-meta {
+  color: #707070;
+}
+
+.lower-footer .copyright {
+  font-size: 13px;
+}
+
+.lower-footer .social-icons {
+  letter-spacing: 0.12em;
+}
+
+.main-footer.stylish .copyright a {
+  color: #c0a88a;
+}

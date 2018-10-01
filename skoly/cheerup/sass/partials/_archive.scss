@@ -1,0 +1,70 @@
+/**
+ * Archives page
+ */
+.archive-head {
+	position: relative;
+	padding: 34px 0;
+	border-bottom: 1px solid #ebebeb;
+	background: #fafafa;
+	font-family: $title-font;
+	text-align: center;
+	text-transform: uppercase;
+	overflow: hidden;
+	
+	.sub-title {
+		display: block;
+		z-index: 2;
+		color: $main-color;
+		font-size: 10px;
+		letter-spacing: 0.09em;
+		line-height: 1;
+		font-weight: 600;
+	}
+	
+	.title {
+		position: relative;
+		z-index: 2;
+		margin-top: 10px;
+		font-size: 25px;
+		font-weight: 500;
+		line-height: 1;
+	}
+	
+	.background {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		color: #b4b4b4;
+		opacity: 0.042;
+		font-size: 126px;
+		line-height: 1.45;
+		font-weight: 300;
+		font-style: normal;
+		
+		-webkit-font-smoothing: antialiased;
+		pointer-events: none;
+	}
+	
+	.description {
+		margin-top: 30px;
+		margin-bottom: -26px;
+		font-family: $text-font;
+		text-transform: none;
+		text-align: center;
+	}
+}
+
+// When there is an ad
+.archive .the-wrap.head {
+	margin-bottom: 0;
+}
+
+.widget-a-wrap + .archive-head {
+	background: #fff;
+	
+	.background {
+		display: none;
+	}
+}

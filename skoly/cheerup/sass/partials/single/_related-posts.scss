@@ -1,0 +1,91 @@
+/**
+ * Related Posts
+ */
+.related-posts {
+	
+	.posts {
+		margin-bottom: -25px;
+		padding-top: 50px;
+		padding-bottom: 10px; // Margins will equal it out
+		text-align: center;
+	}
+	
+	// Set margins to support more than 3 posts
+	.post {
+		margin-bottom: 25px;
+		
+		// For medium devices only, revert it back to 3 columns
+		// Columns fluid on medium - set in _grid.scss 
+		@include breakpoint(medium, small) {
+			float: left;
+			width: 33.333%;
+		}
+		
+		@include breakpoint(small) {
+			max-width: 500px;
+			margin: 0 auto;
+		}
+	}
+	
+	.post:nth-child(3n+1) {
+		clear: both;
+	} 
+	
+	.image-link img {
+		display: block;
+		
+		@include breakpoint(small) {
+			width: 100%;
+			max-width: initial;
+		}
+	}
+	
+	.post-title {
+		display: block;
+		margin-top: 16px;
+		margin-bottom: 6px;
+		font-size: inherit;
+		line-height: 1.4;
+		letter-spacing: 0.04em;
+		
+		em {
+			font-style: normal;
+			font-weight: inherit;
+		}
+	}
+	
+	.post-meta {
+		font-size: 9px;
+		margin-bottom: 15px;
+	}
+}
+
+.related-posts.grid-2 {
+	.post:nth-child(3n+1) {
+		clear: none;
+	}
+	
+	.post:nth-child(2n+1) {
+		clear: both;
+	}
+	
+	.post {
+		width: 50%;
+		
+		@include breakpoint(small) {
+			width: 100%;
+			max-width: 500px;
+		}
+	}
+	
+	.post-title {
+		margin-top: 20px;
+		margin-bottom: 8px;
+		padding: 0 10%;
+		font-size: 16px;
+	}
+	
+	.post-meta {
+		font-size: 11px;
+	}
+}

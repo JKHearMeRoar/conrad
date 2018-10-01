@@ -1,0 +1,46 @@
+/**
+ * Widget: Call To Action boxes
+ */
+.widget-cta {
+	
+	.cta-box {
+		position: relative;
+		margin-bottom: 28px;
+	}
+	
+	a, 
+	img {
+		display: block;
+	}
+	
+	img {
+		@include breakpoint(medium) {
+			width: 100%;
+			max-width: initial;
+		}
+	}
+	
+	.label {
+		z-index: 1;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		max-width: 95%; // May not apply at all
+		text-align: center;
+		transform: translateY(-50%) translateX(-50%);
+		padding: 6px 18px;
+		border: 1px solid #fff;
+		
+		background: #fff;
+		color: #454545;
+		
+		font-family: $title-font;
+		font-size: 11px;
+		font-weight: 600;
+		line-height: 1.5;
+		letter-spacing: 0.09em;
+		text-transform: uppercase;
+		transition: all 0.3s ease-in;
+	}
+	
+}

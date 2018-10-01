@@ -1,0 +1,730 @@
+/**
+ * Skin: Trendy
+ */
+@font-face {
+  font-family: 'TexGyreAdventor';
+  src: url("fonts/tex-gyre/texgyreadventor-bold-webfont-webfont.woff2") format("woff2"), url("fonts/tex-gyre/texgyreadventor-bold-webfont-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/**
+ * Change Main Color
+ */
+input[type="submit"],
+button,
+input[type="button"],
+.button,
+.cart-action .cart-link .counter,
+.main-head.compact .posts-ticker .heading,
+.single-cover .overlay .post-cat a,
+.comments-list .bypostauthor .post-author,
+.cat-label a:hover,
+.cat-label.color a,
+.post-thumb:hover .cat-label a,
+.products-block .more-link:hover,
+.beauty-slider .slick-dots .slick-active button,
+.carousel-slider .category,
+.grid-b-slider .category,
+.page-links .current,
+.page-links a:hover,
+.page-links > span,
+.widget-posts .posts.full .counter:before,
+.woocommerce span.onsale,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit,
+.woocommerce a.button.alt,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt,
+.woocommerce input.button.alt:hover,
+.woocommerce #respond input#submit.alt,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce #respond input#submit:hover,
+.woocommerce nav.woocommerce-pagination ul li span.current,
+.woocommerce nav.woocommerce-pagination ul li a:hover,
+.woocommerce .widget_price_filter .price_slider_amount .button {
+  background: #cea525;
+}
+
+blockquote:before,
+.main-color,
+.top-bar .social-icons a:hover,
+.navigation .menu > li:hover > a,
+.navigation .menu > .current-menu-item > a,
+.navigation .menu > .current-menu-parent > a,
+.navigation .menu > .current-menu-ancestor > a,
+.navigation li:hover > a:after,
+.navigation .current-menu-item > a:after,
+.navigation .current-menu-parent > a:after,
+.navigation .current-menu-ancestor > a:after,
+.navigation .menu li li:hover > a,
+.navigation .menu li li.current-menu-item > a,
+.tag-share .post-tags a:hover,
+.post-share-icons a:hover,
+.post-share-icons .likes-count,
+.author-box .author > span,
+.comments-area .section-head .number,
+.comments-list .comment-reply-link,
+.main-footer.dark .social-link:hover,
+.lower-footer .social-icons .fa,
+.archive-head .sub-title,
+.social-share a:hover,
+.social-icons a:hover,
+.post-meta .post-cat > a,
+.post-meta-c .post-author > a,
+.large-post-b .post-footer .author a,
+.trendy-slider .post-cat a,
+.main-pagination .next a:hover,
+.main-pagination .previous a:hover,
+.main-pagination.number .current,
+.post-content a,
+.widget-about .more,
+.widget-about .social-icons .social-btn:hover,
+.widget-social .social-link:hover,
+.woocommerce .star-rating:before,
+.woocommerce .star-rating span:before,
+.woocommerce .amount,
+.woocommerce .order-select .drop a:hover,
+.woocommerce .order-select .drop li.active,
+.woocommerce-page .order-select .drop a:hover,
+.woocommerce-page .order-select .drop li.active,
+.woocommerce .widget_price_filter .price_label .from,
+.woocommerce .widget_price_filter .price_label .to,
+.woocommerce div.product div.summary p.price,
+.woocommerce div.product div.summary span.price,
+.woocommerce #content div.product div.summary p.price,
+.woocommerce #content div.product div.summary span.price {
+  color: #cea525;
+}
+
+.products-block .more-link:hover,
+.beauty-slider .slick-dots .slick-active button,
+.page-links .current,
+.page-links a:hover,
+.page-links > span,
+.woocommerce nav.woocommerce-pagination ul li span.current,
+.woocommerce nav.woocommerce-pagination ul li a:hover {
+  border-color: #cea525;
+}
+
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
+  background-color: #cea525;
+}
+
+.post-title-alt:after,
+.block-head-b .title {
+  border-bottom: 1px solid #cea525;
+}
+
+.widget_categories a:before,
+.widget_product_categories a:before,
+.widget_archive a:before {
+  border: 1px solid #cea525;
+}
+
+/* Change text / contrast font */
+body,
+input,
+textarea,
+select,
+blockquote,
+.archive-head .description,
+.text,
+.post-content,
+.textwidget,
+.post-meta .text-in,
+.widget_categories a,
+.widget_product_categories a,
+.widget_archive a,
+.woocommerce .woocommerce-message,
+.woocommerce .woocommerce-error,
+.woocommerce .woocommerce-info,
+.woocommerce form .form-row,
+.woocommerce .woocommerce-noreviews,
+.woocommerce #reviews #comments ol.commentlist .description,
+.woocommerce-cart .cart-empty,
+.woocommerce-cart .cart-collaterals .cart_totals table {
+  font-family: Lora, Georgia, serif;
+  letter-spacing: 0;
+  -webkit-font-smoothing: initial;
+}
+
+/* Change main body and heading font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input[type="submit"],
+button,
+input[type="button"],
+.button,
+.modern-quote cite,
+.top-bar-content,
+.search-action .search-field,
+.main-head .title,
+.navigation,
+.tag-share,
+.post-share-b .service,
+.author-box,
+.comments-list .comment-content,
+.post-nav .label,
+.main-footer.dark .back-to-top,
+.lower-footer .social-icons,
+.main-footer .social-strip .social-link,
+.main-footer.bold .links .menu-item,
+.main-footer.bold .copyright,
+.archive-head,
+.cat-label a,
+.section-head,
+.post-title-alt,
+.post-title,
+.block-heading,
+.block-head-b,
+.small-post .post-title,
+.likes-count .number,
+.post-meta,
+.grid-post-b .read-more-btn,
+.list-post-b .read-more-btn,
+.post-footer .read-more,
+.post-footer .social-share,
+.post-footer .social-icons,
+.large-post-b .post-footer .author a,
+.products-block .more-link,
+.main-slider,
+.slider-overlay .heading,
+.large-slider,
+.large-slider .heading,
+.grid-slider .category,
+.grid-slider .heading,
+.carousel-slider .category,
+.carousel-slider .heading,
+.grid-b-slider .heading,
+.bold-slider,
+.bold-slider .heading,
+.main-pagination,
+.main-pagination .load-button,
+.page-links,
+.post-content .read-more,
+.widget-about .more,
+.widget-posts .post-title,
+.widget-posts .posts.full .counter:before,
+.widget-cta .label,
+.social-follow .service-link,
+.widget-twitter .meta .date,
+.widget-twitter .follow,
+.widget_categories,
+.widget_product_categories,
+.widget_archive,
+.mobile-menu,
+.woocommerce .main .button,
+.woocommerce .quantity .qty,
+.woocommerce nav.woocommerce-pagination,
+.woocommerce-cart .post-content,
+.woocommerce .woocommerce-ordering,
+.woocommerce-page .woocommerce-ordering,
+.woocommerce ul.products,
+.woocommerce.widget,
+.woocommerce div.product,
+.woocommerce #content div.product,
+.woocommerce-cart .cart-collaterals .cart_totals .button,
+.woocommerce .checkout .shop_table thead th,
+.woocommerce .checkout .shop_table .amount,
+.woocommerce-checkout #payment #place_order {
+  font-family: Lato, Arial, sans-serif;
+}
+
+/* Remove uppercase text on several elements */
+.navigation.inline .menu > li li a,
+.navigation.inline .mega-menu .sub-cats a,
+.navigation.simple,
+.author-box .author > a,
+.comments-list .comment-author,
+.post-title-alt,
+.post-title,
+.slider-overlay .heading,
+.large-slider .heading,
+.grid-slider .heading,
+.carousel-slider .heading,
+.grid-b-slider .heading,
+.bold-slider .heading,
+.main-pagination.number,
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6,
+.widget_calendar tfoot a,
+.woocommerce span.onsale,
+.woocommerce .order-select,
+.woocommerce-page .order-select,
+.woocommerce ul.products li.product,
+.woocommerce ul.products .product_type_external,
+.woocommerce ul.products .added_to_cart,
+.woocommerce .widget_price_filter .price_slider_amount,
+.woocommerce ul.cart_list li a,
+.woocommerce ul.product_list_widget li a,
+.woocommerce.widget_shopping_cart .total > strong,
+.woocommerce div.product .product-cat,
+.woocommerce #content div.product .product-cat,
+.woocommerce div.product .product_title,
+.woocommerce #content div.product .product_title,
+.woocommerce div.product .product_meta,
+.woocommerce #content div.product .product_meta,
+.woocommerce div.product .woocommerce-tabs ul.tabs li a,
+.woocommerce #content div.product .woocommerce-tabs ul.tabs li a,
+.woocommerce table.shop_attributes,
+.woocommerce #reviews #comments ol.commentlist li .meta strong,
+.woocommerce #reviews .comment-form-rating,
+.woocommerce-cart table.cart .label,
+.woocommerce-cart table.cart .product-name > a,
+.woocommerce-cart table.cart .product-cat a,
+.woocommerce .checkout .shop_table thead th {
+  text-transform: none;
+}
+
+/* Navigation Adjustments */
+.navigation {
+  letter-spacing: 0.1em;
+  font-weight: 900;
+}
+
+.navigation .menu > li li a,
+.navigation .mega-menu .sub-cats a {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+.navigation .mega-menu .recent-posts .post-title {
+  font-family: Lato, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.navigation.dark {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Adjust text color */
+.text,
+.post-content,
+.textwidget,
+.widget-cta .label,
+.widget_categories a,
+.widget .product-categories a,
+.widget_archive a {
+  color: #535353;
+}
+
+/**
+ * General components and global changes
+ */
+h1, h2, h3, h4, h5, h6 {
+  color: #535353;
+}
+
+.section-head .title {
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+}
+
+.post-meta time {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.post-meta .post-cat > a {
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.post-meta .meta-sep:before {
+  padding: 0 5px;
+}
+
+.post-title,
+.post-title-alt {
+  font-family: "TexGyreAdventor", Futura, Arial, sans-serif;
+  font-weight: 600;
+  color: #161616;
+  letter-spacing: 0;
+}
+
+.post-title a,
+.post-title-alt a {
+  color: #161616;
+}
+
+.post-title-alt {
+  margin-top: 12px;
+  margin-bottom: 16px;
+  font-size: 23px;
+}
+
+.post-title-alt:after {
+  display: none;
+}
+
+.posts-carousel .post-title {
+  font-size: 18px;
+}
+
+.main-pagination {
+  margin-top: 90px;
+}
+
+.main-pagination .next a,
+.main-pagination .previous a {
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+/**
+ * Posts adjustments
+ */
+.grid-post .post-title-alt {
+  margin-top: 9px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.grid-post .post-thumb {
+  margin-bottom: 0;
+}
+
+.grid-post .meta-title {
+  position: relative;
+  margin: 0 12px;
+  margin-top: -12px;
+  padding: 0 20px;
+  padding-top: 18px;
+  background: #fff;
+}
+
+.grid-post .post-meta-b {
+  margin-top: 15px;
+}
+
+.large-post .featured img {
+  margin-bottom: 23px;
+}
+
+.post-footer {
+  margin-top: 45px;
+}
+
+.post-footer .read-more {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.overlay-post .post-cat a {
+  color: #161616;
+}
+
+.overlay-post .post-title {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+/**
+ * Single Post changes 
+ */
+.single-cover .overlay .post-by {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.post-content {
+  line-height: 1.857;
+}
+
+.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
+  font-family: "TexGyreAdventor", Futura, Arial, sans-serif;
+  font-weight: 600;
+  color: #161616;
+}
+
+.tag-share .post-tags a {
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.author-box .author > span {
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.author-box .author > a {
+  font-family: "TexGyreAdventor", Futura, Arial, sans-serif;
+  font-weight: 600;
+  color: #161616;
+  font-size: 22px;
+}
+
+.author-box .text {
+  font-size: 13px;
+}
+
+.related-posts .post-title {
+  padding: 0 10px;
+  font-family: Lato, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.related-posts .post-title a {
+  color: #535353;
+}
+
+.comments-list .comment-author {
+  color: #535353;
+  margin-bottom: 0;
+}
+
+.comments-list .comment-text {
+  font-size: 13px;
+}
+
+.comments-list .comment-time {
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+}
+
+/**
+ * Home changes
+ */
+.block-heading .title {
+  font-size: 16px;
+}
+
+.trendy-slider .post-cat a {
+  color: #161616;
+}
+
+.trendy-slider .item:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+}
+
+.trendy-slider .item:hover:before {
+  opacity: 0.4;
+}
+
+.trendy-slider .item:hover img {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.trendy-slider .overlay {
+  width: 500px;
+  max-width: calc(100% - 200px);
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.trendy-slider .post-title a,
+.trendy-slider .post-title a:hover {
+  color: #fff;
+}
+
+.trendy-slider time {
+  color: #fff;
+}
+
+.beauty-slider .overlay {
+  width: 350px;
+  margin-left: -175px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.beauty-slider .post-title {
+  font-size: 20px;
+}
+
+.large-slider .heading {
+  font-family: "TexGyreAdventor", Futura, Arial, sans-serif;
+  font-weight: 600;
+  color: #161616;
+}
+
+.grid-slider .heading {
+  font-family: "TexGyreAdventor", Futura, Arial, sans-serif;
+  font-weight: 600;
+  color: #161616;
+  -webkit-font-smoothing: antialiased;
+}
+
+.grid-slider .category {
+  font-size: 11px;
+}
+
+.grid-b-slider .heading {
+  font-family: "TexGyreAdventor", Futura, Arial, sans-serif;
+  font-weight: 600;
+  color: #161616;
+  -webkit-font-smoothing: antialiased;
+}
+
+.carousel-slider .heading {
+  font-family: "TexGyreAdventor", Futura, Arial, sans-serif;
+  font-weight: 600;
+  color: #161616;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bold-slider .heading {
+  font-family: "TexGyreAdventor", Futura, Arial, sans-serif;
+  font-weight: 600;
+  color: #161616;
+  -webkit-font-smoothing: antialiased;
+}
+
+.slider-overlay .heading {
+  font-family: "TexGyreAdventor", Futura, Arial, sans-serif;
+  font-weight: 600;
+  color: #161616;
+  letter-spacing: 0;
+}
+
+.slider-overlay .excerpt {
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+/**
+ * Sidebar adjustments
+ */
+.sidebar .widget {
+  border: 1px solid #ebebeb;
+  padding: 30px;
+}
+
+.sidebar .widget-title {
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  margin: 0 -31px;
+  margin-top: -31px;
+  margin-bottom: 35px;
+  border-color: transparent;
+  background: #161616;
+  color: #fff;
+  font-size: 11px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.sidebar .widget-a-wrap {
+  border: 0;
+}
+
+.sidebar .widget-a-wrap .the-wrap {
+  margin: 0 -30px;
+}
+
+.sidebar .widget_mc4wp_form_widget,
+.sidebar .widget-subscribe {
+  background: #f7f7f7;
+}
+
+.sidebar .widget_mc4wp_form_widget .widget-title,
+.sidebar .widget-subscribe .widget-title {
+  margin: 0;
+  margin-bottom: 35px;
+  background: transparent;
+  color: #535353;
+}
+
+.widget-about .about-text {
+  font-size: 13px;
+}
+
+.widget-about .more {
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.widget-cta .label {
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.widget-posts .post-title {
+  font-family: Lato, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.widget-posts .post-meta {
+  font-size: 10px;
+}
+
+.widget_categories li,
+.widget .product-categories li,
+.widget_archive li {
+  padding: 10px 0;
+}
+
+.widget_categories li:only-child,
+.widget .product-categories li:only-child,
+.widget_archive li:only-child {
+  padding-bottom: 0;
+}
+
+.widget_categories a,
+.widget .product-categories a,
+.widget_archive a {
+  font-size: 13px;
+}
+
+.widget_categories a:before,
+.widget .product-categories a:before,
+.widget_archive a:before {
+  margin-top: 8px;
+}
+
+/**
+ * Footer Changes 
+ */
+.upper-footer .widget-title {
+  color: #535353;
+  font-weight: 700;
+}
+
+.contrast .lower-footer .copyright {
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+  font-family: Lato, Arial, sans-serif;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+}
+
+.contrast .lower-footer .social-icons {
+  line-height: 1.5;
+}
